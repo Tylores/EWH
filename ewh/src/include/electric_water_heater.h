@@ -1,9 +1,8 @@
 #ifndef ELECTRIC_WATER_HEATER_H_
 #define ELECTRIC_WATER_HEATER_H_
 
-#include "include/universal_control_module.h"
-#include "include/easylogging++.h"
-
+#include "universal_control_module.h"
+#include <string>
 #include <cea2045/device/DeviceFactory.h>
 #include <cea2045/communicationport/CEA2045SerialPort.h> 
 
@@ -14,24 +13,32 @@ public:
 	virtual ~ElectricWaterHeater ();
 
 	// Get Methods
+	unsigned int GetImportPower ();
+	unsigned int GetImportEnergy ();
 
 
 	// Set Methods
+	void SetImportWatts (unsigned int watts);
 
 
 	// Control
 	void Loop ();
+	void Print ();
+
+public:
+	// structures
+	enum OpState {
+		IDLE, NORMAL, CURTAILED, HEIGHTENED, GRID, SGD_ERROR,
+	};
 
 private:
 	void UpdateCommodityData ();
-	void ImportPower ();
-
 
 private:
 	// composition
 	UniversalControlModule ucm_;
-	cea2045::CEA2045SerialPort sp_("/dev/ttyUSB0");
 	cea2045::ResponseCodes response_codes_;
+	cea2045::CEA2045SerialPort *sp_ptr_;
 	cea2045::ICEA2045DeviceUCM *device_ptr_;
 
 private:

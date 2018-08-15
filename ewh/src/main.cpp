@@ -101,137 +101,95 @@
  *      Author: dupes
  */
 
-#include "include/universal_control_module.h"
+// INCLUDE
+#include <iostream>     // cout, cin
+#include <thread>       // thread, join
+#include <chrono>       // now, duration
+#include <map>
+#include <string>
+#include <vector>
+
+#include "include/electric_water_heater.h"
 #include "include/easylogging++.h"
 
-#include <cea2045/device/DeviceFactory.h>
-#include <cea2045/communicationport/CEA2045SerialPort.h>
-
-using namespace cea2045;
+using namespace std;
 
 INITIALIZE_EASYLOGGINGPP
 
-#include <cea2045/util/MSTimer.h>
+bool done = false;  //signals program to stop
 
-int main()
-{
-	MSTimer timer;
-	bool shutdown = false;
+// Help
+// - CLI interface description
+void Help () {
+    cout << "\n\t[Help Menu]\n\n";
+    cout << "> q            quit\n";
+    cout << "> h            display help menu\n";
+    cout << "> i 		    import power\n";
+    cout << "> s 			shed\n";
+    cout << "> p            print properties\n" << endl;
+} // end Help
 
-	CEA2045SerialPort sp("/dev/ttyUSB0");
-	UniversalControlModule ucm;
-	ResponseCodes responseCodes;
-
-	if (!sp.open())
-	{
-		LOG(ERROR) << "failed to open serial port: " << strerror(errno);
-		return 0;
+bool CommandLineInterface (char command, ElectricWaterHeater *EWH) {
+	switch (command) {
+		case 'q':
+			return true;
+		case 'h':
+			Help ();
+			return false;
+		case 'i':
+			EWH->SetImportWatts (4500);
+			return false;
+		case 's':
+			EWH->SetImportWatts (0);
+			return false;
+		case 'p':
+			EWH->Print ();
+			return false;
+		default:
+			cout << "[ERROR]: Invalid Command" << endl;
+			return false;
 	}
+}  // end Command Line Interface
 
-	ICEA2045DeviceUCM *device = DeviceFactory::createUCM(&sp, &ucm);
-
-	device->start();
-
-	timer.reset();
-
-	responseCodes = device->querySuportDataLinkMessages().get();
-
-	LOG(INFO) << "  query data link elapsed time: " << timer.getElapsedMS();
-
-	timer.reset();
-
-	responseCodes = device->queryMaxPayload().get();
-
-	LOG(INFO) << "  query max payload elapsed time: " << timer.getElapsedMS();
-
-	timer.reset();
-
-	responseCodes = device->querySuportIntermediateMessages().get();
-
-	LOG(INFO) << "  query intermediate elapsed time: " << timer.getElapsedMS();
-
-	timer.reset();
-
-	responseCodes = device->intermediateGetDeviceInformation().get();
-
-	LOG(INFO) << "  device info elapsed time: " << timer.getElapsedMS();
-
-	LOG(INFO) << "startup complete";
-
-	while (!shutdown)
-	{
-		char c = getchar();
-
-		switch (c)
-		{
-			case 'c':
-				device->basicCriticalPeakEvent(5).get();
-				break;
-
-			case 'e':
-				device->basicEndShed(0).get();
-				break;
-
-			case 'g':
-				device->basicGridEmergency(5).get();
-				break;
-
-			case 'l':
-				device->basicLoadUp(5).get();
-				break;
-
-			case '\n':
-				break;
-
-			case 'n':
-				device->basicNextRelativePrice(153).get(); // approx 4x
-				break;
-
-			case 'o':
-				device->basicOutsideCommConnectionStatus(OutsideCommuncatonStatusCode::Found);
-				break;
-
-			case 'p':
-				device->basicPowerLevel(63).get();		// approx 50%
-				break;
-
-			case 'q':
-				shutdown = true;
-				break;
-
-			case 'r':
-				device->basicPresentRelativePrice(101).get();	// approx twice
-				break;
-
-			case 's':
-				device->basicShed(5).get();
-				break;
-
-			case 'C':
-				device->intermediateGetCommodity().get();
-				break;
-
-			case 'O':
-				device->intermediateGetTemperatureOffset().get();
-				break;
-
-			case 'S':
-				device->intermediateGetSetPoint().get();
-				break;
-
-			case 'T':
-				device->intermediateGetPresentTemperature().get();
-				break;
-
-			default:
-				LOG(WARNING) << "invalid command";
-				break;
-		}
+void InterfaceLoop (ElectricWaterHeater *EWH) {
+	Help ();
+	while (!done) {
+		char command = getchar ();
+		done = CommandLineInterface (command, EWH);
 	}
+}  // end Interface Loop
 
-	device->shutDown();
+void ControlLoop (ElectricWaterHeater *EWH) {
+	unsigned int time_remaining, time_past;
+    unsigned int time_wait = 1000;
+    auto time_start = chrono::high_resolution_clock::now();
+    auto time_end = chrono::high_resolution_clock::now();
+    chrono::duration<double, milli> time_elapsed;
 
-	delete (device);
+    while (!done) {
+        time_start = chrono::high_resolution_clock::now();
+            // time since last control call;
+            time_elapsed = time_start - time_end;
+            time_past = time_elapsed.count();
+            EWH->Loop();
+        time_end = chrono::high_resolution_clock::now();
+        time_elapsed = time_end - time_start;
 
+        // determine sleep duration after deducting process time
+        time_remaining = (time_wait - time_elapsed.count());
+        time_remaining = (time_remaining > 0) ? time_remaining : 0;
+        this_thread::sleep_for (chrono::milliseconds (time_remaining));
+    }
+}  // end Control Loop
+
+int main() {
+	ElectricWaterHeater *ewh_ptr = new ElectricWaterHeater ();
+	thread CLI (InterfaceLoop, ewh_ptr);
+	thread EWH (ControlLoop, ewh_ptr);
+
+	while (!done) {
+		this_thread::sleep_for (chrono::milliseconds (1000));
+	}
+	delete ewh_ptr;
 	return 0;
 }

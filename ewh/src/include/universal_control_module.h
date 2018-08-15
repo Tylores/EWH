@@ -115,6 +115,10 @@
 
 using namespace std;
 
+struct CommodityData {
+	unsigned int code, cumulative, rate; 
+};
+
 class UniversalControlModule : public cea2045::IUCM {
 public:
 	// Constructor/Destructor
@@ -123,6 +127,7 @@ public:
 
 	// Get Methods
 	std::vector <CommodityData> GetCommodityData ();
+	unsigned int GetOpState ();
 
 	bool isMessageTypeSupported (
 		cea2045::MessageTypeCode messageType
@@ -177,16 +182,12 @@ public:
 		const unsigned char *buffer, unsigned int numBytes
 	);
 
-public:
-	// data structures
-	struct CommodityData {
-		unsigned int code, cumulative, rate; 
-	};
-
 private:
+	// properties
 	cea2045::MaxPayloadLengthCode SGD_MAX_PAYLOAD_;
 	unsigned int device_type_;
 	unsigned int vendor_id_;
+	unsigned int op_state_;
 	std::vector <CommodityData> commodities_;
 
 };

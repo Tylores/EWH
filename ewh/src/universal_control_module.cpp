@@ -117,9 +117,13 @@ UniversalControlModule::UniversalControlModule () {
 UniversalControlModule::~UniversalControlModule () {
 }  // end Destructor
 
-std::vector <CommodityData> GetCommodityData () {
+std::vector <CommodityData> UniversalControlModule::GetCommodityData () {
 	return commodities_;
 }  // end Get Commodity Data
+
+unsigned int UniversalControlModule::GetOpState () {
+	return op_state_;
+}  // end Get Op State
 
 // Is Message Type Supported
 // - ...not sure where this is called or where it passes value to?
@@ -316,6 +320,7 @@ void UniversalControlModule::processNakReceived (
 // -
 void UniversalControlModule::processOperationalStateReceived (
 	cea2045::cea2045Basic *message) {
+	op_state_ = (unsigned int)message->opCode2;
 	LOG(INFO) << "operational state received " << (int)message->opCode2;
 }  // end Process Operation State Received
 
