@@ -1,14 +1,12 @@
 #include "include/electric_water_heater.h"
 #include "include/easylogging++.h"
 
-ElectricWaterHeater::ElectricWaterHeater () : 
-	sp_ptr_(new cea2045::CEA2045SerialPort("/dev/ttyUSB0")) {
-
-	if (!sp_ptr_->open ()) {
+ElectricWaterHeater::ElectricWaterHeater () : sp_("/dev/ttyUSB0") {
+	if (!sp_.open ()) {
 		LOG(ERROR) << "failed to open serial port: " << strerror(errno);
 		exit (1);
 	} else {
-		device_ptr_ = cea2045::DeviceFactory::createUCM(sp_ptr_, &ucm_);
+		device_ptr_ = cea2045::DeviceFactory::createUCM(&sp_, &ucm_);
 		device_ptr_->start ();
 	}
 	response_codes_ = device_ptr_->querySuportDataLinkMessages().get();
@@ -21,7 +19,6 @@ ElectricWaterHeater::ElectricWaterHeater () :
 
 ElectricWaterHeater::~ElectricWaterHeater () {
 	delete device_ptr_;
-	delete sp_ptr_;
 }  // end Destructor
 
 // Get Import Power

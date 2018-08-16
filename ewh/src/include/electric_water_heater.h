@@ -35,10 +35,12 @@ private:
 	void UpdateCommodityData ();
 
 private:
-	// composition
+	// Composition
+	// - These are objects that a smart electric water heater will "have" and 
+	// - cannot exist without. 
 	UniversalControlModule ucm_;
 	cea2045::ResponseCodes response_codes_;
-	cea2045::CEA2045SerialPort *sp_ptr_;
+	cea2045::CEA2045SerialPort sp_;
 	cea2045::ICEA2045DeviceUCM *device_ptr_;
 
 private:
