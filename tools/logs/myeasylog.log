@@ -1,52 +1,122 @@
-2018-08-14 09:19:28,740 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 11:33:45,307 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 11:34:53,263 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 14:51:48,924 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 14:54:06,385 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 14:54:44,151 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 14:54:45,321 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 14:56:31,603 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 14:57:20,773 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 18:18:01,692 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 18:18:48,518 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 18:19:15,266 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 18:23:43,189 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 18:23:53,370 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 18:27:15,952 ERROR [default] failed to open serial port: No such file or directory
-2018-08-14 18:29:58,056 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 12:34:57,289 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 14:45:36,903 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 14:46:28,601 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 14:48:24,595 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 14:49:09,368 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 14:50:41,005 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 14:51:31,087 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 15:02:35,035 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 15:04:18,104 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 15:08:13,754 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 15:14:33,986 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 15:16:20,463 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 15:25:42,928 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 15:30:01,127 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 15:55:37,957 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 15:56:44,141 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:00:51,587 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:02:06,734 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:03:31,104 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:08:01,644 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:09:34,857 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:11:54,176 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:12:07,918 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:16:00,091 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:16:38,036 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:20:03,345 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:20:42,483 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:21:54,505 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:22:37,373 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:23:23,428 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:26:00,271 ERROR [default] failed to open serial port: No such file or directory
-2018-08-15 16:28:15,592 ERROR [default] failed to open serial port: No such file or directory
-2018-08-16 07:21:24,114 ERROR [default] failed to open serial port: No such file or directory
-2018-08-16 07:31:49,938 ERROR [default] failed to open serial port: No such file or directory
-2018-08-16 07:34:10,468 ERROR [default] failed to open serial port: No such file or directory
-2018-08-16 07:34:46,514 ERROR [default] failed to open serial port: No such file or directory
+2018-08-22 12:35:08,010 INFO  [default] ack received: 3
+2018-08-22 12:35:08,010 INFO  [default] supports data link messages
+2018-08-22 12:35:08,155 INFO  [default] ack received: 1
+2018-08-22 12:35:08,257 INFO  [default] message type supported received: 3
+2018-08-22 12:35:08,258 INFO  [default] max payload response received
+2018-08-22 12:35:08,444 INFO  [default] ack received: 4
+2018-08-22 12:35:08,444 INFO  [default] supports intermediate messages
+2018-08-22 12:35:08,546 INFO  [default] startup complete
+2018-08-22 12:35:08,589 INFO  [default] ack received: 0
+2018-08-22 12:35:09,218 WARN  [default] incomplete message received: 20
+2018-08-22 12:35:09,404 INFO  [default] ack received: 13
+2018-08-22 12:35:09,507 INFO  [default] operational state received 0
+2018-08-22 12:35:09,693 INFO  [default] ack received: 7
+2018-08-22 12:35:09,796 INFO  [default] app nak received
+2018-08-22 12:35:13,690 INFO  [default] ack received: 16
+2018-08-22 12:35:13,816 INFO  [default] message type supported received: 2
+2018-08-22 12:35:13,818 INFO  [default] commodity response received.  count: 3
+2018-08-22 12:35:13,820 INFO  [default] commodity data: 0
+2018-08-22 12:35:13,821 INFO  [default]         code: 0
+2018-08-22 12:35:13,822 INFO  [default]   cumulative: 7907
+2018-08-22 12:35:13,822 INFO  [default]    inst rate: 0
+2018-08-22 12:35:13,822 INFO  [default] commodity data: 1
+2018-08-22 12:35:13,822 INFO  [default]         code: 6
+2018-08-22 12:35:13,822 INFO  [default]   cumulative: 0
+2018-08-22 12:35:13,823 INFO  [default]    inst rate: 0
+2018-08-22 12:35:13,823 INFO  [default] commodity data: 2
+2018-08-22 12:35:13,823 INFO  [default]         code: 7
+2018-08-22 12:35:13,823 INFO  [default]   cumulative: 0
+2018-08-22 12:35:13,823 INFO  [default]    inst rate: 0
+2018-08-22 12:35:14,010 INFO  [default] ack received: 13
+2018-08-22 12:35:14,113 INFO  [default] operational state received 0
+2018-08-22 12:35:14,299 INFO  [default] ack received: 6
+2018-08-22 12:35:14,403 INFO  [default] app nak received
+2018-08-22 12:37:08,939 INFO  [default] ack received: 3
+2018-08-22 12:37:08,943 INFO  [default] supports data link messages
+2018-08-22 12:37:09,089 INFO  [default] ack received: 1
+2018-08-22 12:37:09,192 INFO  [default] message type supported received: 3
+2018-08-22 12:37:09,193 INFO  [default] max payload response received
+2018-08-22 12:37:09,378 INFO  [default] ack received: 4
+2018-08-22 12:37:09,378 INFO  [default] supports intermediate messages
+2018-08-22 12:37:09,482 INFO  [default] startup complete
+2018-08-22 12:37:09,524 INFO  [default] ack received: 0
+2018-08-22 12:37:10,152 WARN  [default] incomplete message received: 19
+2018-08-22 12:37:10,338 INFO  [default] ack received: 13
+2018-08-22 12:37:10,442 INFO  [default] operational state received 0
+2018-08-22 12:37:10,628 INFO  [default] ack received: 7
+2018-08-22 12:37:10,731 INFO  [default] app nak received
+2018-08-22 12:37:14,625 INFO  [default] ack received: 16
+2018-08-22 12:37:14,749 INFO  [default] message type supported received: 2
+2018-08-22 12:37:14,750 INFO  [default] commodity response received.  count: 3
+2018-08-22 12:37:14,750 INFO  [default] commodity data: 0
+2018-08-22 12:37:14,750 INFO  [default]         code: 0
+2018-08-22 12:37:14,750 INFO  [default]   cumulative: 7907
+2018-08-22 12:37:14,750 INFO  [default]    inst rate: 0
+2018-08-22 12:37:14,750 INFO  [default] commodity data: 1
+2018-08-22 12:37:14,750 INFO  [default]         code: 6
+2018-08-22 12:37:14,750 INFO  [default]   cumulative: 0
+2018-08-22 12:37:14,750 INFO  [default]    inst rate: 0
+2018-08-22 12:37:14,750 INFO  [default] commodity data: 2
+2018-08-22 12:37:14,750 INFO  [default]         code: 7
+2018-08-22 12:37:14,750 INFO  [default]   cumulative: 0
+2018-08-22 12:37:14,750 INFO  [default]    inst rate: 0
+2018-08-22 12:37:14,940 INFO  [default] ack received: 13
+2018-08-22 12:37:15,042 INFO  [default] operational state received 0
+2018-08-22 12:37:15,229 INFO  [default] ack received: 6
+2018-08-22 12:37:15,333 INFO  [default] app nak received
+2018-08-22 12:37:16,320 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGINT] signal
+2018-08-22 12:37:16,321 WARN  [default] Aborting application. Reason: Fatal log at [src/include/easylogging++.h:5583]
+2018-08-22 12:39:26,226 INFO  [default] ack received: 3
+2018-08-22 12:39:26,227 INFO  [default] supports data link messages
+2018-08-22 12:39:26,376 INFO  [default] ack received: 1
+2018-08-22 12:39:26,479 INFO  [default] message type supported received: 3
+2018-08-22 12:39:26,480 INFO  [default] max payload response received
+2018-08-22 12:39:26,665 INFO  [default] ack received: 4
+2018-08-22 12:39:26,665 INFO  [default] supports intermediate messages
+2018-08-22 12:39:26,768 INFO  [default] startup complete
+2018-08-22 12:39:26,811 INFO  [default] ack received: 0
+2018-08-22 12:39:27,439 WARN  [default] incomplete message received: 22
+2018-08-22 12:39:27,624 INFO  [default] ack received: 13
+2018-08-22 12:39:27,728 INFO  [default] operational state received 0
+2018-08-22 12:39:27,913 INFO  [default] ack received: 7
+2018-08-22 12:39:28,017 INFO  [default] app nak received
+2018-08-22 12:39:31,910 INFO  [default] ack received: 16
+2018-08-22 12:39:32,036 INFO  [default] message type supported received: 2
+2018-08-22 12:39:32,037 INFO  [default] commodity response received.  count: 3
+2018-08-22 12:39:32,038 INFO  [default] commodity data: 0
+2018-08-22 12:39:32,038 INFO  [default]         code: 0
+2018-08-22 12:39:32,038 INFO  [default]   cumulative: 7907
+2018-08-22 12:39:32,038 INFO  [default]    inst rate: 0
+2018-08-22 12:39:32,039 INFO  [default] commodity data: 1
+2018-08-22 12:39:32,039 INFO  [default]         code: 6
+2018-08-22 12:39:32,039 INFO  [default]   cumulative: 0
+2018-08-22 12:39:32,039 INFO  [default]    inst rate: 0
+2018-08-22 12:39:32,039 INFO  [default] commodity data: 2
+2018-08-22 12:39:32,040 INFO  [default]         code: 7
+2018-08-22 12:39:32,040 INFO  [default]   cumulative: 0
+2018-08-22 12:39:32,040 INFO  [default]    inst rate: 0
+2018-08-22 12:39:32,225 INFO  [default] ack received: 13
+2018-08-22 12:39:32,329 INFO  [default] operational state received 0
+2018-08-22 12:39:32,514 INFO  [default] ack received: 7
+2018-08-22 12:39:32,618 INFO  [default] app nak received
+2018-08-22 12:39:36,911 INFO  [default] ack received: 16
+2018-08-22 12:39:37,037 INFO  [default] message type supported received: 2
+2018-08-22 12:39:37,038 INFO  [default] commodity response received.  count: 3
+2018-08-22 12:39:37,038 INFO  [default] commodity data: 0
+2018-08-22 12:39:37,038 INFO  [default]         code: 0
+2018-08-22 12:39:37,039 INFO  [default]   cumulative: 7907
+2018-08-22 12:39:37,039 INFO  [default]    inst rate: 0
+2018-08-22 12:39:37,039 INFO  [default] commodity data: 1
+2018-08-22 12:39:37,039 INFO  [default]         code: 6
+2018-08-22 12:39:37,039 INFO  [default]   cumulative: 0
+2018-08-22 12:39:37,040 INFO  [default]    inst rate: 0
+2018-08-22 12:39:37,040 INFO  [default] commodity data: 2
+2018-08-22 12:39:37,040 INFO  [default]         code: 7
+2018-08-22 12:39:37,040 INFO  [default]   cumulative: 0
+2018-08-22 12:39:37,040 INFO  [default]    inst rate: 0
+2018-08-22 12:39:37,226 INFO  [default] ack received: 13
+2018-08-22 12:39:37,329 INFO  [default] operational state received 0
+2018-08-22 12:39:37,515 INFO  [default] ack received: 7
+2018-08-22 12:39:37,619 INFO  [default] app nak received
+2018-08-22 12:39:39,680 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGINT] signal
+2018-08-22 12:39:39,680 WARN  [default] Aborting application. Reason: Fatal log at [src/include/easylogging++.h:5583]

@@ -161,7 +161,7 @@ void InterfaceLoop (ElectricWaterHeater *EWH) {
 
 void ControlLoop (ElectricWaterHeater *EWH) {
 	unsigned int time_remaining, time_past;
-    unsigned int time_wait = 1000;
+    unsigned int time_wait = 5000;
     auto time_start = chrono::high_resolution_clock::now();
     auto time_end = chrono::high_resolution_clock::now();
     chrono::duration<double, milli> time_elapsed;
@@ -183,6 +183,10 @@ void ControlLoop (ElectricWaterHeater *EWH) {
 }  // end Control Loop
 
 int main() {
+	el::Configurations conf("../data/easy_logger.conf");
+	// Actually reconfigure all loggers instead
+    	el::Loggers::reconfigureAllLoggers(conf);
+
 	ElectricWaterHeater *ewh_ptr = new ElectricWaterHeater ();
 	thread CLI (InterfaceLoop, ewh_ptr);
 	thread EWH (ControlLoop, ewh_ptr);

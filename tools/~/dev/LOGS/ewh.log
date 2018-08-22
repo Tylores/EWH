@@ -1,0 +1,702 @@
+2018-08-22 12:40:41,021 ack received: 3
+2018-08-22 12:40:41,021 supports data link messages
+2018-08-22 12:40:41,166 ack received: 1
+2018-08-22 12:40:41,269 message type supported received: 3
+2018-08-22 12:40:41,269 max payload response received
+2018-08-22 12:40:41,455 ack received: 4
+2018-08-22 12:40:41,455 supports intermediate messages
+2018-08-22 12:40:41,558 startup complete
+2018-08-22 12:40:41,601 ack received: 0
+2018-08-22 12:40:42,230 incomplete message received: 20
+2018-08-22 12:40:42,415 ack received: 13
+2018-08-22 12:40:42,518 operational state received 0
+2018-08-22 12:40:42,704 ack received: 7
+2018-08-22 12:40:42,808 app nak received
+2018-08-22 12:40:46,701 ack received: 16
+2018-08-22 12:40:46,826 message type supported received: 2
+2018-08-22 12:40:46,826 commodity response received.  count: 3
+2018-08-22 12:40:46,826 commodity data: 0
+2018-08-22 12:40:46,826         code: 0
+2018-08-22 12:40:46,826   cumulative: 7907
+2018-08-22 12:40:46,826    inst rate: 0
+2018-08-22 12:40:46,826 commodity data: 1
+2018-08-22 12:40:46,826         code: 6
+2018-08-22 12:40:46,826   cumulative: 0
+2018-08-22 12:40:46,827    inst rate: 0
+2018-08-22 12:40:46,827 commodity data: 2
+2018-08-22 12:40:46,827         code: 7
+2018-08-22 12:40:46,827   cumulative: 0
+2018-08-22 12:40:46,827    inst rate: 0
+2018-08-22 12:40:47,015 ack received: 13
+2018-08-22 12:40:47,119 operational state received 0
+2018-08-22 12:40:47,305 ack received: 7
+2018-08-22 12:40:47,409 app nak received
+2018-08-22 12:40:51,702 ack received: 16
+2018-08-22 12:40:51,825 message type supported received: 2
+2018-08-22 12:40:51,825 commodity response received.  count: 3
+2018-08-22 12:40:51,826 commodity data: 0
+2018-08-22 12:40:51,826         code: 0
+2018-08-22 12:40:51,826   cumulative: 7907
+2018-08-22 12:40:51,826    inst rate: 0
+2018-08-22 12:40:51,826 commodity data: 1
+2018-08-22 12:40:51,826         code: 6
+2018-08-22 12:40:51,826   cumulative: 0
+2018-08-22 12:40:51,826    inst rate: 0
+2018-08-22 12:40:51,826 commodity data: 2
+2018-08-22 12:40:51,826         code: 7
+2018-08-22 12:40:51,826   cumulative: 0
+2018-08-22 12:40:51,826    inst rate: 0
+2018-08-22 12:40:52,011 ack received: 13
+2018-08-22 12:40:52,114 operational state received 0
+2018-08-22 12:40:52,300 ack received: 7
+2018-08-22 12:40:52,403 app nak received
+2018-08-22 12:40:56,696 ack received: 16
+2018-08-22 12:40:56,820 message type supported received: 2
+2018-08-22 12:40:56,820 commodity response received.  count: 3
+2018-08-22 12:40:56,820 commodity data: 0
+2018-08-22 12:40:56,820         code: 0
+2018-08-22 12:40:56,821   cumulative: 7907
+2018-08-22 12:40:56,821    inst rate: 0
+2018-08-22 12:40:56,821 commodity data: 1
+2018-08-22 12:40:56,821         code: 6
+2018-08-22 12:40:56,821   cumulative: 0
+2018-08-22 12:40:56,821    inst rate: 0
+2018-08-22 12:40:56,821 commodity data: 2
+2018-08-22 12:40:56,821         code: 7
+2018-08-22 12:40:56,821   cumulative: 0
+2018-08-22 12:40:56,821    inst rate: 0
+2018-08-22 12:40:57,005 ack received: 13
+2018-08-22 12:40:57,109 operational state received 0
+2018-08-22 12:40:57,296 ack received: 7
+2018-08-22 12:40:57,398 app nak received
+2018-08-22 12:41:01,691 ack received: 16
+2018-08-22 12:41:01,816 message type supported received: 2
+2018-08-22 12:41:01,816 commodity response received.  count: 3
+2018-08-22 12:41:01,816 commodity data: 0
+2018-08-22 12:41:01,816         code: 0
+2018-08-22 12:41:01,816   cumulative: 7907
+2018-08-22 12:41:01,817    inst rate: 0
+2018-08-22 12:41:01,817 commodity data: 1
+2018-08-22 12:41:01,817         code: 6
+2018-08-22 12:41:01,817   cumulative: 0
+2018-08-22 12:41:01,817    inst rate: 0
+2018-08-22 12:41:01,817 commodity data: 2
+2018-08-22 12:41:01,817         code: 7
+2018-08-22 12:41:01,817   cumulative: 0
+2018-08-22 12:41:01,817    inst rate: 0
+2018-08-22 12:41:02,002 ack received: 13
+2018-08-22 12:41:02,105 operational state received 0
+2018-08-22 12:41:02,291 ack received: 7
+2018-08-22 12:41:02,395 app nak received
+2018-08-22 12:41:06,702 ack received: 16
+2018-08-22 12:41:06,826 message type supported received: 2
+2018-08-22 12:41:06,826 commodity response received.  count: 3
+2018-08-22 12:41:06,826 commodity data: 0
+2018-08-22 12:41:06,826         code: 0
+2018-08-22 12:41:06,826   cumulative: 7907
+2018-08-22 12:41:06,826    inst rate: 0
+2018-08-22 12:41:06,827 commodity data: 1
+2018-08-22 12:41:06,827         code: 6
+2018-08-22 12:41:06,827   cumulative: 0
+2018-08-22 12:41:06,827    inst rate: 0
+2018-08-22 12:41:06,827 commodity data: 2
+2018-08-22 12:41:06,827         code: 7
+2018-08-22 12:41:06,827   cumulative: 0
+2018-08-22 12:41:06,827    inst rate: 0
+2018-08-22 12:41:07,013 ack received: 13
+2018-08-22 12:41:07,115 operational state received 0
+2018-08-22 12:41:07,302 ack received: 7
+2018-08-22 12:41:07,404 app nak received
+2018-08-22 12:41:11,697 ack received: 16
+2018-08-22 12:41:11,822 message type supported received: 2
+2018-08-22 12:41:11,822 commodity response received.  count: 3
+2018-08-22 12:41:11,822 commodity data: 0
+2018-08-22 12:41:11,822         code: 0
+2018-08-22 12:41:11,823   cumulative: 7907
+2018-08-22 12:41:11,823    inst rate: 0
+2018-08-22 12:41:11,823 commodity data: 1
+2018-08-22 12:41:11,823         code: 6
+2018-08-22 12:41:11,823   cumulative: 0
+2018-08-22 12:41:11,823    inst rate: 0
+2018-08-22 12:41:11,823 commodity data: 2
+2018-08-22 12:41:11,823         code: 7
+2018-08-22 12:41:11,823   cumulative: 0
+2018-08-22 12:41:11,823    inst rate: 0
+2018-08-22 12:41:12,007 ack received: 13
+2018-08-22 12:41:12,110 operational state received 0
+2018-08-22 12:41:12,298 ack received: 7
+2018-08-22 12:41:12,400 app nak received
+2018-08-22 12:41:16,693 ack received: 16
+2018-08-22 12:41:16,818 message type supported received: 2
+2018-08-22 12:41:16,818 commodity response received.  count: 3
+2018-08-22 12:41:16,818 commodity data: 0
+2018-08-22 12:41:16,818         code: 0
+2018-08-22 12:41:16,819   cumulative: 7907
+2018-08-22 12:41:16,819    inst rate: 0
+2018-08-22 12:41:16,819 commodity data: 1
+2018-08-22 12:41:16,819         code: 6
+2018-08-22 12:41:16,819   cumulative: 0
+2018-08-22 12:41:16,819    inst rate: 0
+2018-08-22 12:41:16,819 commodity data: 2
+2018-08-22 12:41:16,819         code: 7
+2018-08-22 12:41:16,819   cumulative: 0
+2018-08-22 12:41:16,819    inst rate: 0
+2018-08-22 12:41:17,004 ack received: 13
+2018-08-22 12:41:17,106 operational state received 0
+2018-08-22 12:41:17,292 ack received: 7
+2018-08-22 12:41:17,397 app nak received
+2018-08-22 12:41:21,689 ack received: 16
+2018-08-22 12:41:21,813 message type supported received: 2
+2018-08-22 12:41:21,813 commodity response received.  count: 3
+2018-08-22 12:41:21,813 commodity data: 0
+2018-08-22 12:41:21,813         code: 0
+2018-08-22 12:41:21,813   cumulative: 7907
+2018-08-22 12:41:21,813    inst rate: 0
+2018-08-22 12:41:21,813 commodity data: 1
+2018-08-22 12:41:21,813         code: 6
+2018-08-22 12:41:21,813   cumulative: 0
+2018-08-22 12:41:21,814    inst rate: 0
+2018-08-22 12:41:21,814 commodity data: 2
+2018-08-22 12:41:21,814         code: 7
+2018-08-22 12:41:21,814   cumulative: 0
+2018-08-22 12:41:21,814    inst rate: 0
+2018-08-22 12:41:21,999 ack received: 13
+2018-08-22 12:41:22,102 operational state received 0
+2018-08-22 12:41:22,288 ack received: 7
+2018-08-22 12:41:22,392 app nak received
+2018-08-22 12:41:26,689 ack received: 16
+2018-08-22 12:41:26,814 message type supported received: 2
+2018-08-22 12:41:26,814 commodity response received.  count: 3
+2018-08-22 12:41:26,814 commodity data: 0
+2018-08-22 12:41:26,814         code: 0
+2018-08-22 12:41:26,815   cumulative: 7907
+2018-08-22 12:41:26,815    inst rate: 0
+2018-08-22 12:41:26,815 commodity data: 1
+2018-08-22 12:41:26,815         code: 6
+2018-08-22 12:41:26,815   cumulative: 0
+2018-08-22 12:41:26,815    inst rate: 0
+2018-08-22 12:41:26,815 commodity data: 2
+2018-08-22 12:41:26,815         code: 7
+2018-08-22 12:41:26,815   cumulative: 0
+2018-08-22 12:41:26,815    inst rate: 0
+2018-08-22 12:41:27,003 ack received: 13
+2018-08-22 12:41:27,107 operational state received 0
+2018-08-22 12:41:27,294 ack received: 7
+2018-08-22 12:41:27,396 app nak received
+2018-08-22 12:41:31,689 ack received: 16
+2018-08-22 12:41:31,814 message type supported received: 2
+2018-08-22 12:41:31,814 commodity response received.  count: 3
+2018-08-22 12:41:31,814 commodity data: 0
+2018-08-22 12:41:31,814         code: 0
+2018-08-22 12:41:31,814   cumulative: 7907
+2018-08-22 12:41:31,814    inst rate: 0
+2018-08-22 12:41:31,814 commodity data: 1
+2018-08-22 12:41:31,814         code: 6
+2018-08-22 12:41:31,814   cumulative: 0
+2018-08-22 12:41:31,815    inst rate: 0
+2018-08-22 12:41:31,815 commodity data: 2
+2018-08-22 12:41:31,815         code: 7
+2018-08-22 12:41:31,815   cumulative: 0
+2018-08-22 12:41:31,815    inst rate: 0
+2018-08-22 12:41:31,999 ack received: 13
+2018-08-22 12:41:32,102 operational state received 0
+2018-08-22 12:41:32,288 ack received: 7
+2018-08-22 12:41:32,392 app nak received
+2018-08-22 12:41:35,111 Import Power: 0 watts
+2018-08-22 12:41:35,112 Import Energy: 0watt-hours
+2018-08-22 12:41:36,685 ack received: 16
+2018-08-22 12:41:36,809 message type supported received: 2
+2018-08-22 12:41:36,809 commodity response received.  count: 3
+2018-08-22 12:41:36,809 commodity data: 0
+2018-08-22 12:41:36,809         code: 0
+2018-08-22 12:41:36,809   cumulative: 7907
+2018-08-22 12:41:36,809    inst rate: 0
+2018-08-22 12:41:36,809 commodity data: 1
+2018-08-22 12:41:36,809         code: 6
+2018-08-22 12:41:36,809   cumulative: 0
+2018-08-22 12:41:36,809    inst rate: 0
+2018-08-22 12:41:36,809 commodity data: 2
+2018-08-22 12:41:36,809         code: 7
+2018-08-22 12:41:36,809   cumulative: 0
+2018-08-22 12:41:36,809    inst rate: 0
+2018-08-22 12:41:36,994 ack received: 13
+2018-08-22 12:41:37,098 operational state received 0
+2018-08-22 12:41:37,284 ack received: 7
+2018-08-22 12:41:37,387 app nak received
+2018-08-22 12:41:41,685 ack received: 16
+2018-08-22 12:41:41,810 message type supported received: 2
+2018-08-22 12:41:41,810 commodity response received.  count: 3
+2018-08-22 12:41:41,810 commodity data: 0
+2018-08-22 12:41:41,810         code: 0
+2018-08-22 12:41:41,810   cumulative: 7907
+2018-08-22 12:41:41,810    inst rate: 0
+2018-08-22 12:41:41,810 commodity data: 1
+2018-08-22 12:41:41,810         code: 6
+2018-08-22 12:41:41,810   cumulative: 0
+2018-08-22 12:41:41,810    inst rate: 0
+2018-08-22 12:41:41,810 commodity data: 2
+2018-08-22 12:41:41,810         code: 7
+2018-08-22 12:41:41,810   cumulative: 0
+2018-08-22 12:41:41,810    inst rate: 0
+2018-08-22 12:41:41,994 ack received: 13
+2018-08-22 12:41:42,098 operational state received 0
+2018-08-22 12:41:42,284 ack received: 7
+2018-08-22 12:41:42,388 app nak received
+2018-08-22 12:41:46,686 ack received: 16
+2018-08-22 12:41:46,810 message type supported received: 2
+2018-08-22 12:41:46,810 commodity response received.  count: 3
+2018-08-22 12:41:46,810 commodity data: 0
+2018-08-22 12:41:46,810         code: 0
+2018-08-22 12:41:46,810   cumulative: 7907
+2018-08-22 12:41:46,810    inst rate: 0
+2018-08-22 12:41:46,810 commodity data: 1
+2018-08-22 12:41:46,810         code: 6
+2018-08-22 12:41:46,810   cumulative: 0
+2018-08-22 12:41:46,810    inst rate: 0
+2018-08-22 12:41:46,810 commodity data: 2
+2018-08-22 12:41:46,810         code: 7
+2018-08-22 12:41:46,810   cumulative: 0
+2018-08-22 12:41:46,811    inst rate: 0
+2018-08-22 12:41:46,995 ack received: 13
+2018-08-22 12:41:47,097 operational state received 0
+2018-08-22 12:41:47,285 ack received: 7
+2018-08-22 12:41:47,388 app nak received
+2018-08-22 12:41:51,680 ack received: 16
+2018-08-22 12:41:51,805 message type supported received: 2
+2018-08-22 12:41:51,806 commodity response received.  count: 3
+2018-08-22 12:41:51,806 commodity data: 0
+2018-08-22 12:41:51,806         code: 0
+2018-08-22 12:41:51,806   cumulative: 7907
+2018-08-22 12:41:51,806    inst rate: 0
+2018-08-22 12:41:51,806 commodity data: 1
+2018-08-22 12:41:51,806         code: 6
+2018-08-22 12:41:51,806   cumulative: 0
+2018-08-22 12:41:51,806    inst rate: 0
+2018-08-22 12:41:51,806 commodity data: 2
+2018-08-22 12:41:51,806         code: 7
+2018-08-22 12:41:51,806   cumulative: 0
+2018-08-22 12:41:51,806    inst rate: 0
+2018-08-22 12:41:51,991 ack received: 13
+2018-08-22 12:41:52,093 operational state received 0
+2018-08-22 12:41:52,280 ack received: 7
+2018-08-22 12:41:52,384 app nak received
+2018-08-22 12:41:56,676 ack received: 16
+2018-08-22 12:41:56,801 message type supported received: 2
+2018-08-22 12:41:56,801 commodity response received.  count: 3
+2018-08-22 12:41:56,802 commodity data: 0
+2018-08-22 12:41:56,802         code: 0
+2018-08-22 12:41:56,802   cumulative: 7907
+2018-08-22 12:41:56,802    inst rate: 0
+2018-08-22 12:41:56,802 commodity data: 1
+2018-08-22 12:41:56,802         code: 6
+2018-08-22 12:41:56,802   cumulative: 0
+2018-08-22 12:41:56,802    inst rate: 0
+2018-08-22 12:41:56,802 commodity data: 2
+2018-08-22 12:41:56,802         code: 7
+2018-08-22 12:41:56,802   cumulative: 0
+2018-08-22 12:41:56,802    inst rate: 0
+2018-08-22 12:41:56,992 ack received: 13
+2018-08-22 12:41:57,094 operational state received 0
+2018-08-22 12:41:57,280 ack received: 7
+2018-08-22 12:41:57,384 app nak received
+2018-08-22 12:42:03,596 ack received: 3
+2018-08-22 12:42:03,597 supports data link messages
+2018-08-22 12:42:03,745 ack received: 1
+2018-08-22 12:42:03,848 message type supported received: 3
+2018-08-22 12:42:03,848 max payload response received
+2018-08-22 12:42:04,035 ack received: 4
+2018-08-22 12:42:04,035 supports intermediate messages
+2018-08-22 12:42:04,138 startup complete
+2018-08-22 12:42:04,180 ack received: 0
+2018-08-22 12:42:04,809 incomplete message received: 20
+2018-08-22 12:42:04,994 ack received: 13
+2018-08-22 12:42:05,097 operational state received 0
+2018-08-22 12:42:05,283 ack received: 7
+2018-08-22 12:42:05,387 app nak received
+2018-08-22 12:42:09,280 ack received: 16
+2018-08-22 12:42:09,405 message type supported received: 2
+2018-08-22 12:42:09,405 commodity response received.  count: 3
+2018-08-22 12:42:09,405 commodity data: 0
+2018-08-22 12:42:09,405         code: 0
+2018-08-22 12:42:09,406   cumulative: 7907
+2018-08-22 12:42:09,406    inst rate: 0
+2018-08-22 12:42:09,406 commodity data: 1
+2018-08-22 12:42:09,406         code: 6
+2018-08-22 12:42:09,406   cumulative: 0
+2018-08-22 12:42:09,406    inst rate: 0
+2018-08-22 12:42:09,406 commodity data: 2
+2018-08-22 12:42:09,406         code: 7
+2018-08-22 12:42:09,406   cumulative: 0
+2018-08-22 12:42:09,406    inst rate: 0
+2018-08-22 12:42:09,590 ack received: 13
+2018-08-22 12:42:09,693 operational state received 0
+2018-08-22 12:42:09,879 ack received: 7
+2018-08-22 12:42:09,983 app nak received
+2018-08-22 12:42:14,276 ack received: 16
+2018-08-22 12:42:14,401 message type supported received: 2
+2018-08-22 12:42:14,401 commodity response received.  count: 3
+2018-08-22 12:42:14,401 commodity data: 0
+2018-08-22 12:42:14,401         code: 0
+2018-08-22 12:42:14,401   cumulative: 7907
+2018-08-22 12:42:14,401    inst rate: 0
+2018-08-22 12:42:14,401 commodity data: 1
+2018-08-22 12:42:14,401         code: 6
+2018-08-22 12:42:14,402   cumulative: 0
+2018-08-22 12:42:14,402    inst rate: 0
+2018-08-22 12:42:14,402 commodity data: 2
+2018-08-22 12:42:14,402         code: 7
+2018-08-22 12:42:14,402   cumulative: 0
+2018-08-22 12:42:14,402    inst rate: 0
+2018-08-22 12:42:14,586 ack received: 13
+2018-08-22 12:42:14,689 operational state received 0
+2018-08-22 12:42:14,875 ack received: 7
+2018-08-22 12:42:14,979 app nak received
+2018-08-22 12:42:19,277 ack received: 16
+2018-08-22 12:42:19,401 message type supported received: 2
+2018-08-22 12:42:19,401 commodity response received.  count: 3
+2018-08-22 12:42:19,401 commodity data: 0
+2018-08-22 12:42:19,401         code: 0
+2018-08-22 12:42:19,401   cumulative: 7907
+2018-08-22 12:42:19,401    inst rate: 0
+2018-08-22 12:42:19,401 commodity data: 1
+2018-08-22 12:42:19,401         code: 6
+2018-08-22 12:42:19,401   cumulative: 0
+2018-08-22 12:42:19,401    inst rate: 0
+2018-08-22 12:42:19,402 commodity data: 2
+2018-08-22 12:42:19,402         code: 7
+2018-08-22 12:42:19,402   cumulative: 0
+2018-08-22 12:42:19,402    inst rate: 0
+2018-08-22 12:42:19,587 ack received: 13
+2018-08-22 12:42:19,690 operational state received 0
+2018-08-22 12:42:19,876 ack received: 7
+2018-08-22 12:42:19,980 app nak received
+2018-08-22 12:42:24,273 ack received: 16
+2018-08-22 12:42:24,397 message type supported received: 2
+2018-08-22 12:42:24,397 commodity response received.  count: 3
+2018-08-22 12:42:24,397 commodity data: 0
+2018-08-22 12:42:24,397         code: 0
+2018-08-22 12:42:24,397   cumulative: 7907
+2018-08-22 12:42:24,397    inst rate: 0
+2018-08-22 12:42:24,397 commodity data: 1
+2018-08-22 12:42:24,397         code: 6
+2018-08-22 12:42:24,397   cumulative: 0
+2018-08-22 12:42:24,397    inst rate: 0
+2018-08-22 12:42:24,397 commodity data: 2
+2018-08-22 12:42:24,397         code: 7
+2018-08-22 12:42:24,397   cumulative: 0
+2018-08-22 12:42:24,397    inst rate: 0
+2018-08-22 12:42:24,582 ack received: 13
+2018-08-22 12:42:24,686 operational state received 0
+2018-08-22 12:42:24,872 ack received: 7
+2018-08-22 12:42:24,975 app nak received
+2018-08-22 12:42:29,268 ack received: 16
+2018-08-22 12:42:29,393 message type supported received: 2
+2018-08-22 12:42:29,394 commodity response received.  count: 3
+2018-08-22 12:42:29,394 commodity data: 0
+2018-08-22 12:42:29,394         code: 0
+2018-08-22 12:42:29,394   cumulative: 7907
+2018-08-22 12:42:29,394    inst rate: 0
+2018-08-22 12:42:29,394 commodity data: 1
+2018-08-22 12:42:29,394         code: 6
+2018-08-22 12:42:29,394   cumulative: 0
+2018-08-22 12:42:29,394    inst rate: 0
+2018-08-22 12:42:29,394 commodity data: 2
+2018-08-22 12:42:29,394         code: 7
+2018-08-22 12:42:29,394   cumulative: 0
+2018-08-22 12:42:29,394    inst rate: 0
+2018-08-22 12:42:29,584 ack received: 13
+2018-08-22 12:42:29,686 operational state received 0
+2018-08-22 12:42:29,873 ack received: 7
+2018-08-22 12:42:29,977 app nak received
+2018-08-22 12:42:34,270 ack received: 16
+2018-08-22 12:42:34,394 message type supported received: 2
+2018-08-22 12:42:34,394 commodity response received.  count: 3
+2018-08-22 12:42:34,394 commodity data: 0
+2018-08-22 12:42:34,394         code: 0
+2018-08-22 12:42:34,394   cumulative: 7907
+2018-08-22 12:42:34,394    inst rate: 0
+2018-08-22 12:42:34,394 commodity data: 1
+2018-08-22 12:42:34,394         code: 6
+2018-08-22 12:42:34,395   cumulative: 0
+2018-08-22 12:42:34,395    inst rate: 0
+2018-08-22 12:42:34,395 commodity data: 2
+2018-08-22 12:42:34,395         code: 7
+2018-08-22 12:42:34,395   cumulative: 0
+2018-08-22 12:42:34,395    inst rate: 0
+2018-08-22 12:42:34,584 ack received: 13
+2018-08-22 12:42:34,687 operational state received 0
+2018-08-22 12:42:34,874 ack received: 7
+2018-08-22 12:42:34,977 app nak received
+2018-08-22 12:42:39,274 ack received: 16
+2018-08-22 12:42:39,399 message type supported received: 2
+2018-08-22 12:42:39,400 commodity response received.  count: 3
+2018-08-22 12:42:39,400 commodity data: 0
+2018-08-22 12:42:39,400         code: 0
+2018-08-22 12:42:39,400   cumulative: 7907
+2018-08-22 12:42:39,400    inst rate: 0
+2018-08-22 12:42:39,400 commodity data: 1
+2018-08-22 12:42:39,400         code: 6
+2018-08-22 12:42:39,400   cumulative: 0
+2018-08-22 12:42:39,400    inst rate: 0
+2018-08-22 12:42:39,400 commodity data: 2
+2018-08-22 12:42:39,401         code: 7
+2018-08-22 12:42:39,401   cumulative: 0
+2018-08-22 12:42:39,401    inst rate: 0
+2018-08-22 12:42:39,589 ack received: 13
+2018-08-22 12:42:39,692 operational state received 0
+2018-08-22 12:42:39,878 ack received: 7
+2018-08-22 12:42:39,982 app nak received
+2018-08-22 12:42:44,180 ack received: 16
+2018-08-22 12:42:44,304 message type supported received: 2
+2018-08-22 12:42:44,304 commodity response received.  count: 3
+2018-08-22 12:42:44,304 commodity data: 0
+2018-08-22 12:42:44,304         code: 0
+2018-08-22 12:42:44,305   cumulative: 7907
+2018-08-22 12:42:44,305    inst rate: 0
+2018-08-22 12:42:44,305 commodity data: 1
+2018-08-22 12:42:44,305         code: 6
+2018-08-22 12:42:44,305   cumulative: 0
+2018-08-22 12:42:44,305    inst rate: 0
+2018-08-22 12:42:44,305 commodity data: 2
+2018-08-22 12:42:44,305         code: 7
+2018-08-22 12:42:44,305   cumulative: 0
+2018-08-22 12:42:44,305    inst rate: 0
+2018-08-22 12:42:44,489 ack received: 13
+2018-08-22 12:42:44,593 operational state received 0
+2018-08-22 12:42:44,779 ack received: 7
+2018-08-22 12:42:44,882 app nak received
+2018-08-22 12:42:49,275 ack received: 16
+2018-08-22 12:42:49,400 message type supported received: 2
+2018-08-22 12:42:49,400 commodity response received.  count: 3
+2018-08-22 12:42:49,400 commodity data: 0
+2018-08-22 12:42:49,400         code: 0
+2018-08-22 12:42:49,400   cumulative: 7907
+2018-08-22 12:42:49,400    inst rate: 0
+2018-08-22 12:42:49,401 commodity data: 1
+2018-08-22 12:42:49,401         code: 6
+2018-08-22 12:42:49,401   cumulative: 0
+2018-08-22 12:42:49,401    inst rate: 0
+2018-08-22 12:42:49,401 commodity data: 2
+2018-08-22 12:42:49,401         code: 7
+2018-08-22 12:42:49,401   cumulative: 0
+2018-08-22 12:42:49,401    inst rate: 0
+2018-08-22 12:42:49,585 ack received: 13
+2018-08-22 12:42:49,687 operational state received 0
+2018-08-22 12:42:49,874 ack received: 7
+2018-08-22 12:42:49,978 app nak received
+2018-08-22 12:42:54,270 ack received: 16
+2018-08-22 12:42:54,395 message type supported received: 2
+2018-08-22 12:42:54,396 commodity response received.  count: 3
+2018-08-22 12:42:54,396 commodity data: 0
+2018-08-22 12:42:54,396         code: 0
+2018-08-22 12:42:54,396   cumulative: 7907
+2018-08-22 12:42:54,396    inst rate: 0
+2018-08-22 12:42:54,396 commodity data: 1
+2018-08-22 12:42:54,396         code: 6
+2018-08-22 12:42:54,396   cumulative: 0
+2018-08-22 12:42:54,396    inst rate: 0
+2018-08-22 12:42:54,396 commodity data: 2
+2018-08-22 12:42:54,396         code: 7
+2018-08-22 12:42:54,396   cumulative: 0
+2018-08-22 12:42:54,396    inst rate: 0
+2018-08-22 12:42:54,581 ack received: 13
+2018-08-22 12:42:54,683 operational state received 0
+2018-08-22 12:42:54,870 ack received: 7
+2018-08-22 12:42:54,974 app nak received
+2018-08-22 12:42:59,265 ack received: 16
+2018-08-22 12:42:59,390 message type supported received: 2
+2018-08-22 12:42:59,391 commodity response received.  count: 3
+2018-08-22 12:42:59,391 commodity data: 0
+2018-08-22 12:42:59,391         code: 0
+2018-08-22 12:42:59,391   cumulative: 7907
+2018-08-22 12:42:59,391    inst rate: 0
+2018-08-22 12:42:59,391 commodity data: 1
+2018-08-22 12:42:59,391         code: 6
+2018-08-22 12:42:59,391   cumulative: 0
+2018-08-22 12:42:59,391    inst rate: 0
+2018-08-22 12:42:59,391 commodity data: 2
+2018-08-22 12:42:59,391         code: 7
+2018-08-22 12:42:59,391   cumulative: 0
+2018-08-22 12:42:59,391    inst rate: 0
+2018-08-22 12:42:59,576 ack received: 13
+2018-08-22 12:42:59,678 operational state received 0
+2018-08-22 12:42:59,865 ack received: 7
+2018-08-22 12:42:59,969 app nak received
+2018-08-22 12:43:04,275 ack received: 16
+2018-08-22 12:43:04,401 message type supported received: 2
+2018-08-22 12:43:04,401 commodity response received.  count: 3
+2018-08-22 12:43:04,402 commodity data: 0
+2018-08-22 12:43:04,402         code: 0
+2018-08-22 12:43:04,402   cumulative: 7907
+2018-08-22 12:43:04,402    inst rate: 0
+2018-08-22 12:43:04,402 commodity data: 1
+2018-08-22 12:43:04,402         code: 6
+2018-08-22 12:43:04,402   cumulative: 0
+2018-08-22 12:43:04,402    inst rate: 0
+2018-08-22 12:43:04,402 commodity data: 2
+2018-08-22 12:43:04,402         code: 7
+2018-08-22 12:43:04,402   cumulative: 0
+2018-08-22 12:43:04,402    inst rate: 0
+2018-08-22 12:43:04,591 ack received: 13
+2018-08-22 12:43:04,694 operational state received 0
+2018-08-22 12:43:04,880 ack received: 7
+2018-08-22 12:43:04,984 app nak received
+2018-08-22 12:43:09,182 ack received: 16
+2018-08-22 12:43:09,306 message type supported received: 2
+2018-08-22 12:43:09,306 commodity response received.  count: 3
+2018-08-22 12:43:09,306 commodity data: 0
+2018-08-22 12:43:09,306         code: 0
+2018-08-22 12:43:09,306   cumulative: 7907
+2018-08-22 12:43:09,306    inst rate: 0
+2018-08-22 12:43:09,306 commodity data: 1
+2018-08-22 12:43:09,306         code: 6
+2018-08-22 12:43:09,306   cumulative: 0
+2018-08-22 12:43:09,307    inst rate: 0
+2018-08-22 12:43:09,307 commodity data: 2
+2018-08-22 12:43:09,307         code: 7
+2018-08-22 12:43:09,307   cumulative: 0
+2018-08-22 12:43:09,307    inst rate: 0
+2018-08-22 12:43:09,492 ack received: 13
+2018-08-22 12:43:09,594 operational state received 0
+2018-08-22 12:43:09,782 ack received: 7
+2018-08-22 12:43:09,885 app nak received
+2018-08-22 12:43:14,197 ack received: 16
+2018-08-22 12:43:14,322 message type supported received: 2
+2018-08-22 12:43:14,322 commodity response received.  count: 3
+2018-08-22 12:43:14,322 commodity data: 0
+2018-08-22 12:43:14,322         code: 0
+2018-08-22 12:43:14,323   cumulative: 7907
+2018-08-22 12:43:14,323    inst rate: 0
+2018-08-22 12:43:14,323 commodity data: 1
+2018-08-22 12:43:14,323         code: 6
+2018-08-22 12:43:14,323   cumulative: 0
+2018-08-22 12:43:14,323    inst rate: 0
+2018-08-22 12:43:14,323 commodity data: 2
+2018-08-22 12:43:14,323         code: 7
+2018-08-22 12:43:14,323   cumulative: 0
+2018-08-22 12:43:14,323    inst rate: 0
+2018-08-22 12:43:14,512 ack received: 13
+2018-08-22 12:43:14,615 operational state received 0
+2018-08-22 12:43:14,801 ack received: 7
+2018-08-22 12:43:14,906 app nak received
+2018-08-22 12:43:19,198 ack received: 16
+2018-08-22 12:43:19,322 message type supported received: 2
+2018-08-22 12:43:19,322 commodity response received.  count: 3
+2018-08-22 12:43:19,322 commodity data: 0
+2018-08-22 12:43:19,322         code: 0
+2018-08-22 12:43:19,322   cumulative: 7907
+2018-08-22 12:43:19,322    inst rate: 0
+2018-08-22 12:43:19,323 commodity data: 1
+2018-08-22 12:43:19,323         code: 6
+2018-08-22 12:43:19,323   cumulative: 0
+2018-08-22 12:43:19,323    inst rate: 0
+2018-08-22 12:43:19,323 commodity data: 2
+2018-08-22 12:43:19,323         code: 7
+2018-08-22 12:43:19,323   cumulative: 0
+2018-08-22 12:43:19,323    inst rate: 0
+2018-08-22 12:43:19,507 ack received: 13
+2018-08-22 12:43:19,611 operational state received 0
+2018-08-22 12:43:19,797 ack received: 7
+2018-08-22 12:43:19,900 app nak received
+2018-08-22 12:43:24,195 ack received: 16
+2018-08-22 12:43:24,318 message type supported received: 2
+2018-08-22 12:43:24,318 commodity response received.  count: 3
+2018-08-22 12:43:24,318 commodity data: 0
+2018-08-22 12:43:24,318         code: 0
+2018-08-22 12:43:24,318   cumulative: 7907
+2018-08-22 12:43:24,319    inst rate: 0
+2018-08-22 12:43:24,319 commodity data: 1
+2018-08-22 12:43:24,319         code: 6
+2018-08-22 12:43:24,319   cumulative: 0
+2018-08-22 12:43:24,319    inst rate: 0
+2018-08-22 12:43:24,319 commodity data: 2
+2018-08-22 12:43:24,319         code: 7
+2018-08-22 12:43:24,319   cumulative: 0
+2018-08-22 12:43:24,319    inst rate: 0
+2018-08-22 12:43:24,503 ack received: 13
+2018-08-22 12:43:24,606 operational state received 0
+2018-08-22 12:43:24,793 ack received: 7
+2018-08-22 12:43:24,896 app nak received
+2018-08-22 12:43:29,189 ack received: 16
+2018-08-22 12:43:29,314 message type supported received: 2
+2018-08-22 12:43:29,314 commodity response received.  count: 3
+2018-08-22 12:43:29,314 commodity data: 0
+2018-08-22 12:43:29,314         code: 0
+2018-08-22 12:43:29,314   cumulative: 7907
+2018-08-22 12:43:29,314    inst rate: 0
+2018-08-22 12:43:29,314 commodity data: 1
+2018-08-22 12:43:29,314         code: 6
+2018-08-22 12:43:29,314   cumulative: 0
+2018-08-22 12:43:29,314    inst rate: 0
+2018-08-22 12:43:29,315 commodity data: 2
+2018-08-22 12:43:29,315         code: 7
+2018-08-22 12:43:29,315   cumulative: 0
+2018-08-22 12:43:29,315    inst rate: 0
+2018-08-22 12:43:29,499 ack received: 13
+2018-08-22 12:43:29,602 operational state received 0
+2018-08-22 12:43:29,788 ack received: 7
+2018-08-22 12:43:29,892 app nak received
+2018-08-22 12:43:34,185 ack received: 16
+2018-08-22 12:43:34,310 message type supported received: 2
+2018-08-22 12:43:34,310 commodity response received.  count: 3
+2018-08-22 12:43:34,310 commodity data: 0
+2018-08-22 12:43:34,310         code: 0
+2018-08-22 12:43:34,310   cumulative: 7907
+2018-08-22 12:43:34,310    inst rate: 0
+2018-08-22 12:43:34,310 commodity data: 1
+2018-08-22 12:43:34,310         code: 6
+2018-08-22 12:43:34,310   cumulative: 0
+2018-08-22 12:43:34,310    inst rate: 0
+2018-08-22 12:43:34,310 commodity data: 2
+2018-08-22 12:43:34,310         code: 7
+2018-08-22 12:43:34,311   cumulative: 0
+2018-08-22 12:43:34,311    inst rate: 0
+2018-08-22 12:43:34,495 ack received: 13
+2018-08-22 12:43:34,598 operational state received 0
+2018-08-22 12:43:34,784 ack received: 7
+2018-08-22 12:43:34,888 app nak received
+2018-08-22 12:43:39,180 ack received: 16
+2018-08-22 12:43:39,306 message type supported received: 2
+2018-08-22 12:43:39,306 commodity response received.  count: 3
+2018-08-22 12:43:39,306 commodity data: 0
+2018-08-22 12:43:39,306         code: 0
+2018-08-22 12:43:39,306   cumulative: 7907
+2018-08-22 12:43:39,306    inst rate: 0
+2018-08-22 12:43:39,306 commodity data: 1
+2018-08-22 12:43:39,306         code: 6
+2018-08-22 12:43:39,306   cumulative: 0
+2018-08-22 12:43:39,306    inst rate: 0
+2018-08-22 12:43:39,306 commodity data: 2
+2018-08-22 12:43:39,306         code: 7
+2018-08-22 12:43:39,306   cumulative: 0
+2018-08-22 12:43:39,306    inst rate: 0
+2018-08-22 12:43:39,491 ack received: 13
+2018-08-22 12:43:39,594 operational state received 0
+2018-08-22 12:43:39,780 ack received: 7
+2018-08-22 12:43:39,884 app nak received
+2018-08-22 12:43:44,182 ack received: 16
+2018-08-22 12:43:44,307 message type supported received: 2
+2018-08-22 12:43:44,307 commodity response received.  count: 3
+2018-08-22 12:43:44,307 commodity data: 0
+2018-08-22 12:43:44,307         code: 0
+2018-08-22 12:43:44,307   cumulative: 7907
+2018-08-22 12:43:44,308    inst rate: 0
+2018-08-22 12:43:44,308 commodity data: 1
+2018-08-22 12:43:44,308         code: 6
+2018-08-22 12:43:44,308   cumulative: 0
+2018-08-22 12:43:44,308    inst rate: 0
+2018-08-22 12:43:44,308 commodity data: 2
+2018-08-22 12:43:44,308         code: 7
+2018-08-22 12:43:44,308   cumulative: 0
+2018-08-22 12:43:44,308    inst rate: 0
+2018-08-22 12:43:44,491 ack received: 13
+2018-08-22 12:43:44,595 operational state received 0
+2018-08-22 12:43:44,781 ack received: 7
+2018-08-22 12:43:44,885 app nak received
+2018-08-22 12:43:49,181 ack received: 16
+2018-08-22 12:43:49,307 message type supported received: 2
+2018-08-22 12:43:49,307 commodity response received.  count: 3
+2018-08-22 12:43:49,307 commodity data: 0
+2018-08-22 12:43:49,307         code: 0
+2018-08-22 12:43:49,307   cumulative: 7907
+2018-08-22 12:43:49,307    inst rate: 0
