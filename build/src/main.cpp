@@ -129,35 +129,57 @@ void Help () {
     cout << "> p            print properties\n" << endl;
 } // end Help
 
-bool CommandLineInterface (char command, ElectricWaterHeater *EWH) {
-	switch (command) {
-		case 'q':
-			return true;
-		case 'h':
-			Help ();
-			return false;
-		case 'i':
-			EWH->SetImportWatts (4500);
-			return false;
-		case 's':
-			EWH->SetImportWatts (0);
-			return false;
-		case 'p':
-			EWH->Print ();
-			return false;
-		default:
-			cout << "[ERROR]: Invalid Command" << endl;
-			return false;
-	}
-}  // end Command Line Interface
+// Command Line Interface
+// - method to allow user controls during program run-time
+static bool CommandLineInterface (const string& input, 
+                                  ElectricWaterHeater *EWH) {
+    // check for program argument
+    if (input == "") {
+        return false;
+    }
+    char cmd = input[0];
 
-void InterfaceLoop (ElectricWaterHeater *EWH) {
-	Help ();
-	while (!done) {
-		char command = getchar ();
-		done = CommandLineInterface (command, EWH);
-	}
-}  // end Interface Loop
+    // deliminate input string to argument parameters
+    vector <string> tokens;
+    stringstream ss(input);
+    string token;
+    while (ss >> token) {
+        tokens.push_back(token);
+    }
+
+    switch (cmd) {
+        case 'q':
+           return true;
+
+        case 'i': {
+            try {
+                EWH->SetImportWatts(4500);
+            } catch(...) {
+                cout << "[ERROR]: Invalid Argument." << endl;
+            }
+            return false;
+        }
+
+        case 'e': {
+            try {
+                EWH->SetImportWatts(0);
+            } catch(...) {
+                cout << "[ERROR]: Invalid Argument." << endl;
+            }
+            return false;
+        }
+
+        case 'p': {
+            EWH->Print ();
+            return false;
+        }
+
+        default: {
+            Help();
+            return false;
+        }
+    }
+}  // end Command Line Interface
 
 void ControlLoop (ElectricWaterHeater *EWH) {
 	unsigned int time_remaining, time_past;
@@ -185,15 +207,18 @@ void ControlLoop (ElectricWaterHeater *EWH) {
 int main() {
 	el::Configurations conf("../data/easy_logger.conf");
 	// Actually reconfigure all loggers instead
-    	el::Loggers::reconfigureAllLoggers(conf);
+    el::Loggers::reconfigureAllLoggers(conf);
 
 	ElectricWaterHeater *ewh_ptr = new ElectricWaterHeater ();
-	thread CLI (InterfaceLoop, ewh_ptr);
 	thread EWH (ControlLoop, ewh_ptr);
 
-	while (!done) {
-		this_thread::sleep_for (chrono::milliseconds (1000));
-	}
+    Help ();
+    string input;
+    while (!done) {
+        getline(cin, input);
+        done = CommandLineInterface(input, ewh_ptr);
+    }
+
 	delete ewh_ptr;
 	return 0;
 }
