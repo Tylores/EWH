@@ -122,11 +122,11 @@ bool done = false;  //signals program to stop
 // - CLI interface description
 void Help () {
     cout << "\n\t[Help Menu]\n\n";
-    cout << "> q            quit\n";
-    cout << "> h            display help menu\n";
-    cout << "> i 		    import power\n";
-    cout << "> s 			shed\n";
-    cout << "> p            print properties\n" << endl;
+    cout << "> q		quit\n";
+    cout << "> h		display help menu\n";
+    cout << "> i 		import power\n";
+    cout << "> s 		shed\n";
+    cout << "> p        	print properties\n" << endl;
 } // end Help
 
 // Command Line Interface
@@ -160,7 +160,7 @@ static bool CommandLineInterface (const string& input,
             return false;
         }
 
-        case 'e': {
+        case 's': {
             try {
                 EWH->SetImportWatts(0);
             } catch(...) {
@@ -183,7 +183,7 @@ static bool CommandLineInterface (const string& input,
 
 void ControlLoop (ElectricWaterHeater *EWH) {
 	unsigned int time_remaining, time_past;
-    unsigned int time_wait = 5000;
+    unsigned int time_wait = 1000;
     auto time_start = chrono::high_resolution_clock::now();
     auto time_end = chrono::high_resolution_clock::now();
     chrono::duration<double, milli> time_elapsed;

@@ -1,3 +1,4 @@
+#include <iostream>
 #include "include/electric_water_heater.h"
 #include "include/easylogging++.h"
 
@@ -63,11 +64,11 @@ void ElectricWaterHeater::Loop () {
 		&& ucm_.GetOpState () == OpState::IDLE) {
 		device_ptr_->basicEndShed (0);
 	} else {
-		device_ptr_->basicShed (0);
+		device_ptr_->basicShed (64);
 	}
 }  // end Loop
 
 void ElectricWaterHeater::Print () {
-	LOG(INFO) << "Import Power: " << import_power_ << " watts";
-	LOG(INFO) << "Import Energy: " << import_energy_ << "watt-hours";
+	std::cout << "Import Power:\t" << import_power_ << "\twatts\n";
+	std::cout << "Import Energy:\t" << import_energy_ << "\twatt-hours\n";
 }  // end Print
