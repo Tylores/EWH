@@ -6,7 +6,7 @@ Electric Water Heater Controller
 ``` console
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install git build-essential gcc g++ cmake make xsltproc scons doxygen graphviz libgtk2.0-dev libssl-dev libxml2-dev libcap-dev
+sudo apt-get install git build-essential gcc g++ cmake make
 mkdir ~/dev ~/src
 ```
 ### EPRI-CTA2045
