@@ -18,6 +18,7 @@ data = ser.readline()
 sleep(1)
 data = data.encode('hex')
 Etot = float(int(data[58:70],16))
+#comment
 
 while True:
     time2 = time()
