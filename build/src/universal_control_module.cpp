@@ -129,7 +129,7 @@ unsigned int UniversalControlModule::GetOpState () {
 // - ...not sure where this is called or where it passes value to?
 bool UniversalControlModule::isMessageTypeSupported (
 	cea2045::MessageTypeCode messageType) {
-	LOG(INFO) << "message type supported received: " << (int)messageType;
+	//LOG(INFO) << "message type supported received: " << (int)messageType;
 	if (messageType == cea2045::MessageTypeCode::NONE) {
 		return false;
 	} else {
@@ -174,8 +174,6 @@ void UniversalControlModule::processDeviceInfoResponse (
 // - store in a vector for parsing.
 void UniversalControlModule::processCommodityResponse (
 	cea2045::cea2045CommodityResponse* message) {
-	LOG(INFO) << "commodity response received.  count: " 
-		<< message->getCommodityDataCount();
 	int count = message->getCommodityDataCount();
 
 	commodities_.clear ();
@@ -187,11 +185,6 @@ void UniversalControlModule::processCommodityResponse (
 		CD.cumulative = data->getCumulativeAmount ();
 		CD.rate = data->getInstantaneousRate ();
 		commodities_.emplace_back (CD);
-
-		LOG(INFO) << "commodity data: " << x;
-		LOG(INFO) << "        code: " << (int)data->commodityCode;
-		LOG(INFO) << "  cumulative: " << data->getCumulativeAmount();
-		LOG(INFO) << "   inst rate: " << data->getInstantaneousRate();
 	}
 }  // end Process Commodity Response
 
@@ -280,14 +273,14 @@ void UniversalControlModule::processGetUTCTimeResponse (
 // - 
 void UniversalControlModule::processAckReceived (
 	cea2045::MessageCode messageCode) {
-	LOG(INFO) << "ack received: " << (int)messageCode;
+	//LOG(INFO) << "ack received: " << (int)messageCode;
 	switch (messageCode) {
 	case cea2045::MessageCode::SUPPORT_DATALINK_MESSAGES:
-		LOG(INFO) << "supports data link messages";
+		//LOG(INFO) << "supports data link messages";
 		break;
 
 	case cea2045::MessageCode::SUPPORT_INTERMEDIATE_MESSAGES:
-		LOG(INFO) << "supports intermediate messages";
+		//LOG(INFO) << "supports intermediate messages";
 		break;
 
 	default:
@@ -321,21 +314,21 @@ void UniversalControlModule::processNakReceived (
 void UniversalControlModule::processOperationalStateReceived (
 	cea2045::cea2045Basic *message) {
 	op_state_ = (unsigned int)message->opCode2;
-	LOG(INFO) << "operational state received " << (int)message->opCode2;
+	//LOG(INFO) << "operational state received " << (int)message->opCode2;
 }  // end Process Operation State Received
 
 // Process App Ack Received
 // -
 void UniversalControlModule::processAppAckReceived (
 	cea2045::cea2045Basic* message) {
-	LOG(INFO) << "app ack received";
+	//LOG(INFO) << "app ack received";
 }  // end Process App Ack Received
 
 // Process App Nak Received
 // - 
 void UniversalControlModule::processAppNakReceived (
 	cea2045::cea2045Basic* message) {
-	LOG(INFO) << "app nak received";
+	//LOG(INFO) << "app nak received";
 }  // end PRocess App Nak Received
 
 // Process App Cuxstomer Override

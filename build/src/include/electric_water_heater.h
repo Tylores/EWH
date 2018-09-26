@@ -24,6 +24,7 @@ public:
 	// Control
 	void Loop ();
 	void Print ();
+	void Log ();
 
 public:
 	// structures
@@ -47,6 +48,8 @@ private:
 	unsigned int import_watts_;
 	unsigned int import_power_;
 	unsigned int import_energy_;
+	unsigned int energy_total_;
+	unsigned int heartbeat_;	// minute increment to update ucm
 
 
 };

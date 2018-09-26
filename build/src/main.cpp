@@ -182,7 +182,7 @@ static bool CommandLineInterface (const string& input,
 }  // end Command Line Interface
 
 void ControlLoop (ElectricWaterHeater *EWH) {
-	unsigned int time_remaining, time_past;
+    unsigned int time_remaining, time_past;
     unsigned int time_wait = 1000;
     auto time_start = chrono::high_resolution_clock::now();
     auto time_end = chrono::high_resolution_clock::now();
@@ -207,7 +207,8 @@ void ControlLoop (ElectricWaterHeater *EWH) {
 int main() {
 	el::Configurations conf("../data/easy_logger.conf");
 	// Actually reconfigure all loggers instead
-    el::Loggers::reconfigureAllLoggers(conf);
+        el::Loggers::reconfigureAllLoggers(conf);
+	LOG (INFO) << "This better work!";
 
 	ElectricWaterHeater *ewh_ptr = new ElectricWaterHeater ();
 	thread EWH (ControlLoop, ewh_ptr);

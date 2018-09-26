@@ -16,8 +16,8 @@ time1 = time()
 ser.write(b"\x08\x02\x00\x02\x06\x00\xf6\x4c") #Commodity request
 data = ser.readline()
 sleep(1)
-data = data.encode('hex')
-Etot = float(int(data[58:70],16))
+#data = data.encode('hex')
+#Etot = float(int(data[58:70],16))
 #comment
 
 while True:
@@ -31,6 +31,10 @@ while True:
     data = data.encode('hex')
     P = str(int(data[20:32],16))
     E = str(int(data[84:96],16))
+    Etot = float(int(data[58:70],16))
     Epercent = int(E)/Etot * 100
     print('---\nEnergy Capacity: ' + E + ' (%.2f%%)' %Epercent + '\nPower: ' + P + '\n---')
+    #print (E + '\n')
+    #print (P + '\n')
+    print ('Total Capacity: ' + str(Etot) + '\n')
     sleep(1)
