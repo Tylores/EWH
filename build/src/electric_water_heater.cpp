@@ -2,15 +2,15 @@
 #include <sstream>
 #include <chrono>
 #include "include/electric_water_heater.h"
-#include "include/utility.h"
-#include "include/easylogging++.h"
+#include "include/tsu.h"
+#include "include/logger.h"
 
 // MACROS
 #define DEBUG(x) std::cout << x << std::endl
 
 ElectricWaterHeater::ElectricWaterHeater () : sp_("/dev/ttyUSB0"), heartbeat_(1) {
 	if (!sp_.open ()) {
-		LOG(ERROR) << "failed to open serial port: " << strerror(errno);
+		Logger("ERROR") << "failed to open serial port: " << strerror(errno);
 		exit (1);
 	} else {
 		device_ptr_ = cea2045::DeviceFactory::createUCM(&sp_, &ucm_);
@@ -24,7 +24,7 @@ ElectricWaterHeater::ElectricWaterHeater () : sp_("/dev/ttyUSB0"), heartbeat_(1)
 	response_codes_ = device_ptr_->querySuportIntermediateMessages().get();
 	response_codes_ = device_ptr_->intermediateGetDeviceInformation().get();
 
-	LOG (INFO) << "startup complete";
+	Logger("INFO") << "startup complete";
 
 }  // end Constructor
 
@@ -98,7 +98,9 @@ void ElectricWaterHeater::Print () {
 }  // end Print
 
 void ElectricWaterHeater::Log () {
-	LOG(INFO) << "power = " <<  import_power_ << "\tenergy take = "
-		<< import_energy_ << "\tenergy total = " << energy_total_
-		<< "\tstate = " << ucm_.GetOpState ();
+	Logger ("DATA") 
+		<<  import_power_ << "\t"
+		<< import_energy_ << "\t" 
+		<< energy_total_ << "\t"
+		<< ucm_.GetOpState ();
 }  // end Log

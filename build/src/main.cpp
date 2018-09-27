@@ -208,7 +208,6 @@ int main() {
 	el::Configurations conf("../data/easy_logger.conf");
 	// Actually reconfigure all loggers instead
         el::Loggers::reconfigureAllLoggers(conf);
-	LOG (INFO) << "This better work!";
 
 	ElectricWaterHeater *ewh_ptr = new ElectricWaterHeater ();
 	thread EWH (ControlLoop, ewh_ptr);
