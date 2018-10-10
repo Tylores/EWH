@@ -8,7 +8,7 @@
 // MACROS
 #define DEBUG(x) std::cout << x << std::endl
 
-ElectricWaterHeater::ElectricWaterHeater () : sp_("/dev/ttyUSB0"), heartbeat_(1) {
+ElectricWaterHeater::ElectricWaterHeater () : sp_("/dev/ttyUSB0"), heartbeat_(1), log_second_(0) {
 	if (!sp_.open ()) {
 		Logger("ERROR") << "failed to open serial port: " << strerror(errno);
 		exit (1);
@@ -47,8 +47,33 @@ unsigned int ElectricWaterHeater::GetImportEnergy () {
 // Set Import Watts
 // -
 void ElectricWaterHeater::SetImportWatts (unsigned int watts) {
+	if (watts > 0) {
+		Logger("INFO") << "Import command received";
+		critical_peak_ = false;
+		load_up_ = false;
+	} else {
+		Logger("INFO") << "Shed command received";
+		critical_peak_ = false;
+		load_up_ = false;
+	}
 	import_watts_ = watts;
 }  // end Set Import Watts
+
+// Begin critical peak event status
+void ElectricWaterHeater::SetCriticalPeak () {
+	device_ptr_->basicCriticalPeakEvent (0);
+	critical_peak_ = true;
+	load_up_ = false;
+	Logger("INFO") << "Critical peak event command received";
+}  /// end critical peak event status change
+
+// Begin load up status
+void ElectricWaterHeater::SetLoadUp () {
+	device_ptr_->basicLoadUp (0);
+	load_up_ = true;
+	Logger("INFO") << "Load up command received";
+	critical_peak_ = false;
+}  /// end load up command
 
 // Update Commodity Data
 // - 
@@ -74,27 +99,33 @@ void ElectricWaterHeater::Loop () {
 	// if modulus is = 0, then the minute will be equal to the heardbeat
 	// increment. Then only send the signal while the time is at the start 
 	// of the minute
-	if (tsu::GetMinutes() % heartbeat_ == 0 && tsu::GetSeconds() < 2){
+	if (tsu::GetMinutes() % heartbeat_ == 0 && tsu::GetSeconds() < 1){
 		device_ptr_->basicOutsideCommConnectionStatus(
 			cea2045::OutsideCommuncatonStatusCode::Found
 		);
 	}
 
-	// log every minute
-	if (tsu::GetSeconds() < 2){
+	// log every minuteish, there will be some double logs here and there
+	unsigned int sec = tsu::GetSeconds ();
+	if (sec % 2 == 0 && log_second_ != sec){
 		ElectricWaterHeater::Log ();
+		log_second_ = sec;
 	}
-	if (import_watts_ > 0 && import_energy_ > 0) {
+	if (import_watts_ > 0 && import_energy_ > 0 && load_up_ == false && critical_peak_ == false) {
 		device_ptr_->basicEndShed (0);
-	} else {
+	} else if (critical_peak_ == false && load_up_ == false) {
 		device_ptr_->basicShed (0);
 	}
 }  // end Loop
 
 void ElectricWaterHeater::Print () {
 	std::cout << "Power:\t\t\t" << import_power_ << "\twatts\n";
+	std::cout << "Import:\t\t\t" << import_watts_ << "\twatts\n";
 	std::cout << "Energy Available:\t" << import_energy_ << "\twatt-hours\n";
 	std::cout << "Energy Total:\t\t" << energy_total_ << "\twatt-hours\n";
+	std::cout << "State:\t\t\t" << ucm_.GetOpState () << "\n";
+	std::cout << "Critical Peak Event:\t" << critical_peak_ << "\n";
+	std::cout << "Loading up:\t\t" << load_up_ << "\n";
 }  // end Print
 
 void ElectricWaterHeater::Log () {
@@ -102,5 +133,6 @@ void ElectricWaterHeater::Log () {
 		<<  import_power_ << "\t"
 		<< import_energy_ << "\t" 
 		<< energy_total_ << "\t"
-		<< ucm_.GetOpState ();
+		<< ucm_.GetOpState () << "\t"
+		<< import_watts_;
 }  // end Log

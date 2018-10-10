@@ -126,6 +126,8 @@ void Help () {
     cout << "> h		display help menu\n";
     cout << "> i 		import power\n";
     cout << "> s 		shed\n";
+    cout << "> c 		begin critical peak event\n";
+    cout << "> l 		load up\n";
     cout << "> p        	print properties\n" << endl;
 } // end Help
 
@@ -168,6 +170,24 @@ static bool CommandLineInterface (const string& input,
             }
             return false;
         }
+
+	case 'c': {
+	    try{
+	       EWH->SetCriticalPeak();
+	    } catch(...) {
+		cout << "[ERROR]: Invalid Argument." << endl;
+	    }
+	    return false;
+	}
+
+	case 'l': {
+	    try{
+	       EWH->SetLoadUp();
+	    } catch(...) {
+		cout << "[ERROR]: Invalid Argument." << endl;
+	    }
+	    return false;
+	}
 
         case 'p': {
             EWH->Print ();

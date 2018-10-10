@@ -313,7 +313,8 @@ void UniversalControlModule::processNakReceived (
 // -
 void UniversalControlModule::processOperationalStateReceived (
 	cea2045::cea2045Basic *message) {
-	op_state_ = (unsigned int)message->opCode2;
+	op_state_ = (unsigned int)message->opCode1;
+	std::cout << message->opCode2 << std::endl;
 	//LOG(INFO) << "operational state received " << (int)message->opCode2;
 }  // end Process Operation State Received
 

@@ -19,6 +19,8 @@ public:
 
 	// Set Methods
 	void SetImportWatts (unsigned int watts);
+	void SetCriticalPeak ();
+	void SetLoadUp ();
 
 
 	// Control
@@ -50,6 +52,9 @@ private:
 	unsigned int import_energy_;
 	unsigned int energy_total_;
 	unsigned int heartbeat_;	// minute increment to update ucm
+	unsigned int log_second_;
+	bool critical_peak_;
+	bool load_up_;
 
 
 };
