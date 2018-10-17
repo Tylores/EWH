@@ -49,12 +49,10 @@ unsigned int ElectricWaterHeater::GetImportEnergy () {
 void ElectricWaterHeater::SetImportWatts (unsigned int watts) {
 	if (watts > 0) {
 		Logger("INFO") << "Import command received";
-		critical_peak_ = false;
-		load_up_ = false;
+		opstate_ = 1;
 	} else {
 		Logger("INFO") << "Shed command received";
-		critical_peak_ = false;
-		load_up_ = false;
+		opstate_ = 2;
 	}
 	import_watts_ = watts;
 }  // end Set Import Watts
@@ -62,18 +60,31 @@ void ElectricWaterHeater::SetImportWatts (unsigned int watts) {
 // Begin critical peak event status
 void ElectricWaterHeater::SetCriticalPeak () {
 	device_ptr_->basicCriticalPeakEvent (0);
-	critical_peak_ = true;
-	load_up_ = false;
+	opstate_ = 4;
 	Logger("INFO") << "Critical peak event command received";
 }  /// end critical peak event status change
 
 // Begin load up status
 void ElectricWaterHeater::SetLoadUp () {
+	opstate_ = 3;
 	device_ptr_->basicLoadUp (0);
-	load_up_ = true;
 	Logger("INFO") << "Load up command received";
-	critical_peak_ = false;
 }  /// end load up command
+
+// Begin Grid Emergency status
+void ElectricWaterHeater::SetGridEmergency () {
+	opstate_ = 5;
+	device_ptr_->basicGridEmergency (0);
+	Logger("INFO") << "Grid Emergency command received";
+}  /// end grid emergency command
+
+// EXPERIMENTAL: stop reheating by sending import and then export command
+void ElectricWaterHeater::StopReheat () {
+	device_ptr_->basicEndShed (0);
+	device_ptr_->basicShed (0);
+	opstate_ = 2;
+	Logger("INFO") << "Stop Reheat command received";
+}  ///
 
 // Update Commodity Data
 // - 
@@ -111,9 +122,9 @@ void ElectricWaterHeater::Loop () {
 		ElectricWaterHeater::Log ();
 		log_second_ = sec;
 	}
-	if (import_watts_ > 0 && import_energy_ > 0 && load_up_ == false && critical_peak_ == false) {
+	if (opstate_ == 1) {
 		device_ptr_->basicEndShed (0);
-	} else if (critical_peak_ == false && load_up_ == false) {
+	} else if (opstate_ == 2) {
 		device_ptr_->basicShed (0);
 	}
 }  // end Loop
@@ -124,8 +135,7 @@ void ElectricWaterHeater::Print () {
 	std::cout << "Energy Available:\t" << import_energy_ << "\twatt-hours\n";
 	std::cout << "Energy Total:\t\t" << energy_total_ << "\twatt-hours\n";
 	std::cout << "State:\t\t\t" << ucm_.GetOpState () << "\n";
-	std::cout << "Critical Peak Event:\t" << critical_peak_ << "\n";
-	std::cout << "Loading up:\t\t" << load_up_ << "\n";
+	std::cout << "Operation State:\t" << opstate_ << "\n";
 }  // end Print
 
 void ElectricWaterHeater::Log () {
@@ -134,5 +144,6 @@ void ElectricWaterHeater::Log () {
 		<< import_energy_ << "\t" 
 		<< energy_total_ << "\t"
 		<< ucm_.GetOpState () << "\t"
-		<< import_watts_;
+		<< import_watts_ << "\t"
+		<< opstate_;
 }  // end Log

@@ -128,6 +128,8 @@ void Help () {
     cout << "> s 		shed\n";
     cout << "> c 		begin critical peak event\n";
     cout << "> l 		load up\n";
+    cout << "> e 		grid emergency\n";
+    cout << "> r 		stop reheat\n";
     cout << "> p        	print properties\n" << endl;
 } // end Help
 
@@ -183,6 +185,24 @@ static bool CommandLineInterface (const string& input,
 	case 'l': {
 	    try{
 	       EWH->SetLoadUp();
+	    } catch(...) {
+		cout << "[ERROR]: Invalid Argument." << endl;
+	    }
+	    return false;
+	}
+	
+	case 'e': {
+	    try{
+	       EWH->SetGridEmergency();
+	    } catch(...) {
+		cout << "[ERROR]: Invalid Argument." << endl;
+	    }
+	    return false;
+	}
+
+	case 'r': {
+	    try{
+	       EWH->StopReheat();
 	    } catch(...) {
 		cout << "[ERROR]: Invalid Argument." << endl;
 	    }

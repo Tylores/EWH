@@ -1,4 +1,4 @@
-#ifndef ELECTRIC_WATER_HEATER_H_
+ #ifndef ELECTRIC_WATER_HEATER_H_
 #define ELECTRIC_WATER_HEATER_H_
 
 #include "universal_control_module.h"
@@ -21,12 +21,16 @@ public:
 	void SetImportWatts (unsigned int watts);
 	void SetCriticalPeak ();
 	void SetLoadUp ();
+	void SetGridEmergency ();
 
 
 	// Control
 	void Loop ();
 	void Print ();
 	void Log ();
+
+	// experimental
+	void StopReheat ();
 
 public:
 	// structures
@@ -53,8 +57,7 @@ private:
 	unsigned int energy_total_;
 	unsigned int heartbeat_;	// minute increment to update ucm
 	unsigned int log_second_;
-	bool critical_peak_;
-	bool load_up_;
+	int opstate_;
 
 
 };
