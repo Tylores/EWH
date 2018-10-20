@@ -27,12 +27,16 @@ endif
 
 CXXFLAGS := -Wall -pipe -std=c++11 -Wno-long-long -Wno-deprecated -g 
 CXXFLAGS += -DQCC_OS_LINUX -DQCC_OS_GROUP_POSIX -DQCC_DBG $(CPUFLAGS)
-LIB := -lstdc++ -lpthread -lrt -lm $(PILIBS)
+LIB := -lstdc++ -lpthread -lrt -lm
 INC := -I src/include
 
 # CTA2045 Requirments
 LIB += -L$(CTALIB) -lcea2045
 INC += -I$(CTAINC)
+
+# WiringPi Requirments
+LIB += -L/usr/lib -lwiringPi
+INC += -I/usr/include
 
 $(TARGET) : $(OBJECTS)
 	@mkdir -p $(TARGETDIR)

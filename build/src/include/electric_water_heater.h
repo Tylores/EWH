@@ -5,6 +5,7 @@
 #include <string>
 #include <cea2045/device/DeviceFactory.h>
 #include <cea2045/communicationport/CEA2045SerialPort.h> 
+#include "mcp3008.h"
 
 class ElectricWaterHeater {
 public:
@@ -40,6 +41,7 @@ public:
 
 private:
 	void UpdateCommodityData ();
+	float CalculatePower();
 
 private:
 	// Composition
@@ -49,6 +51,7 @@ private:
 	cea2045::ResponseCodes response_codes_;
 	cea2045::CEA2045SerialPort sp_;
 	cea2045::ICEA2045DeviceUCM *device_ptr_;
+	mcp3008 current_transducer_1_;
 
 private:
 	unsigned int import_watts_;

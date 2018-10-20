@@ -4,11 +4,12 @@
 #include "include/electric_water_heater.h"
 #include "include/tsu.h"
 #include "include/logger.h"
+#include "include/mcp3008.h"
 
 // MACROS
 #define DEBUG(x) std::cout << x << std::endl
 
-ElectricWaterHeater::ElectricWaterHeater () : sp_("/dev/ttyUSB0"), heartbeat_(1), log_second_(0) {
+ElectricWaterHeater::ElectricWaterHeater () : sp_("/dev/ttyUSB0"), heartbeat_(1), log_second_(0), current_transducer_1_(100){
 	if (!sp_.open ()) {
 		Logger("ERROR") << "failed to open serial port: " << strerror(errno);
 		exit (1);
@@ -86,6 +87,10 @@ void ElectricWaterHeater::StopReheat () {
 	Logger("INFO") << "Stop Reheat command received";
 }  ///
 
+float ElectricWaterHeater::CalculatePower(){
+	return current_transducer_1_.GetCurrent() * 208; // assuming Vrms = 208
+}
+
 // Update Commodity Data
 // - 
 void ElectricWaterHeater::UpdateCommodityData () {
@@ -145,5 +150,7 @@ void ElectricWaterHeater::Log () {
 		<< energy_total_ << "\t"
 		<< ucm_.GetOpState () << "\t"
 		<< import_watts_ << "\t"
-		<< opstate_;
+		<< opstate_ << "\t"
+		<< ElectricWaterHeater::CalculatePower() << "\t"
+		<< current_transducer_1_.GetCurrent();
 }  // end Log
