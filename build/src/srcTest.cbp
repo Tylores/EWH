@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="src" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/src" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectIncludeDirsRelation="1" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add directory="/home/pi/dev/EWH/build/src/include" />
+					<Add directory="/home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045" />
+				</Compiler>
+				<Linker>
+					<Add option="-lcea2045" />
+					<Add option="-lpthread" />
+					<Add library="/home/pi/src/CTA-2045-UCM-CPP-Library/build/debug/libcea2045.so" />
+					<Add directory="/home/pi/src/CTA-2045-UCM-CPP-Library" />
+					<Add directory="/home/pi/src/CTA-2045-UCM-CPP-Library/build/debug/" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/src" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/communicationport/CEA2045SerialPort.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/communicationport/CEA2045SerialPort.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/communicationport/ICommunicationPort.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/CEA2045Device.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/CEA2045Device.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/CEA2045DeviceUCM.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/CEA2045DeviceUCM.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/DeviceFactory.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/DeviceFactory.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/ICEA2045Device.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/ICEA2045Device.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/ICEA2045DeviceUCM.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/MessageHandler.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/MessageHandler.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/Basic.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/Basic.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/Intermediate.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/Intermediate.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/Message.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/Message.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/QueryMaxPayload.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/QueryMaxPayload.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/QueryMessageTypeSupported.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/QueryMessageTypeSupported.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/SetEnergyPrice.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/SetEnergyPrice.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/SetSetpoints.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/SetSetpoints.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/SetTemperatureOffset.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/SetTemperatureOffset.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/StartCycling.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/StartCycling.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/TerminateCycling.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/TerminateCycling.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/linklayer/ILinkLayerComm.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/linklayer/ILinkLayerCommRecv.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/linklayer/ILinkLayerCommRecv.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/linklayer/ILinkLayerCommSend.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/linklayer/LinkLayerCommImpl.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/linklayer/LinkLayerCommImpl.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/linklayer/ReceiveBuffer.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/linklayer/ReceiveBuffer.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045Message.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageBasic.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageCommodityResponse.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageDataLink.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageDeviceInfoResponse.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageGetPresentTemperatureResponse.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageGetSetpointsResponse.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageGetTemperatureOffsetResponse.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageGetUTCTimeResponse.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageIntermediate.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageIntermediateResponse.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageMacros.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageSetEnergyPriceRequest.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageSetSetpointsRequest.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageSetTemperatureOffsetRequest.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageStartCyclingRequest.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageTerminateCyclingRequest.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageTypeSupported.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/ConvertEnums.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/ConvertEnums.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/processmessage/IProcessMessage.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/processmessage/ISGD.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/processmessage/IUCM.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/processmessage/ProcessMessageSGD.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/processmessage/ProcessMessageSGD.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/processmessage/ProcessMessageUCM.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/processmessage/ProcessMessageUCM.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/util/CEA2045Time.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/util/CEA2045Time.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/util/Checksum.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/util/Checksum.h" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/util/MSTimer.cpp" />
+		<Unit filename="../../../../src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/util/MSTimer.h" />
+		<Unit filename="../../data/easy_logger.conf" />
+		<Unit filename="electric_water_heater.cpp" />
+		<Unit filename="include/easylogging++.h" />
+		<Unit filename="include/electric_water_heater.h" />
+		<Unit filename="include/universal_control_module.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="universal_control_module.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -104,7 +104,10 @@
 #include "include/universal_control_module.h"
 #include "include/easylogging++.h"
 
-#include <cea2045/util/MSTimer.h>
+//#include <cea2045/util/MSTimer.h>
+#include "/home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/util/MSTimer.h"
+
+
 #include <chrono>
 
 using namespace std;
@@ -154,7 +157,7 @@ void UniversalControlModule::processMaxPayloadResponse (
 }  // end Process Max Payload Response
 
 // Process Device Info Response
-// - static information about the smart grid device. There is more available to 
+// - static information about the smart grid device. There is more available to
 // - get, but it doesn't appear to be very helpful at this time.
 // TODO(TS): add map to convert type and id.
 void UniversalControlModule::processDeviceInfoResponse (
@@ -165,16 +168,16 @@ void UniversalControlModule::processDeviceInfoResponse (
 	LOG (INFO) << "    device type: " << device_type_;
 	LOG (INFO) << "      vendor ID: " << vendor_id_;
 	LOG (INFO) << "  firmware date: "
-			<< 2000 + (int)message->firmwareYear20xx << "-" 
+			<< 2000 + (int)message->firmwareYear20xx << "-"
 			<< (int)message->firmwareMonth << "-" << (int)message->firmwareDay;
 }  // end Process Device Info Response
 
 // Process Commodity Response
-// - store each commodity response in the CommodityData structure and then 
+// - store each commodity response in the CommodityData structure and then
 // - store in a vector for parsing.
 void UniversalControlModule::processCommodityResponse (
 	cea2045::cea2045CommodityResponse* message) {
-	LOG(INFO) << "commodity response received.  count: " 
+	LOG(INFO) << "commodity response received.  count: "
 		<< message->getCommodityDataCount();
 	int count = message->getCommodityDataCount();
 
@@ -196,7 +199,7 @@ void UniversalControlModule::processCommodityResponse (
 }  // end Process Commodity Response
 
 // Process Set Energy Price Response
-// TODO(TS): this has not been implemented, but has been definded because it is 
+// TODO(TS): this has not been implemented, but has been definded because it is
 // a pure virtual function of IUCM.
 void UniversalControlModule::processSetEnergyPriceResponse (
 	cea2045::cea2045IntermediateResponse *message) {
@@ -204,7 +207,7 @@ void UniversalControlModule::processSetEnergyPriceResponse (
 }  // end Process Set Energy Price Response
 
 // Process Set Temperature Offset Response
-// TODO(TS): this has not been implemented, but has been definded because it is 
+// TODO(TS): this has not been implemented, but has been definded because it is
 // a pure virtual function of IUCM.
 void UniversalControlModule::processSetTemperatureOffsetResponse (
 	cea2045::cea2045IntermediateResponse *message) {
@@ -212,7 +215,7 @@ void UniversalControlModule::processSetTemperatureOffsetResponse (
 }  // end Process Set Temperature Offset Response
 
 // Process Get Temperature Offset Response
-// TODO(TS): this has not been implemented, but has been definded because it is 
+// TODO(TS): this has not been implemented, but has been definded because it is
 // a pure virtual function of IUCM.
 void UniversalControlModule::processGetTemperatureOffsetResponse (
 	cea2045::cea2045GetTemperateOffsetResponse *message) {
@@ -220,7 +223,7 @@ void UniversalControlModule::processGetTemperatureOffsetResponse (
 }  // end Process Get Temperature Offset Response
 
 // Process Set Setpoints Response
-// TODO(TS): this has not been implemented, but has been definded because it is 
+// TODO(TS): this has not been implemented, but has been definded because it is
 // a pure virtual function of IUCM.
 void UniversalControlModule::processSetSetpointsResponse (
 	cea2045::cea2045IntermediateResponse *message) {
@@ -228,7 +231,7 @@ void UniversalControlModule::processSetSetpointsResponse (
 }  // end Process Set Setpoints Response
 
 // Process Get Setpoints Response
-// TODO(TS): this has not been implemented, but has been definded because it is 
+// TODO(TS): this has not been implemented, but has been definded because it is
 // a pure virtual function of IUCM.
 void UniversalControlModule::processGetSetpointsResponse (
 	cea2045::cea2045GetSetpointsResponse1 *message) {
@@ -236,7 +239,7 @@ void UniversalControlModule::processGetSetpointsResponse (
 }  // end Process Get Setpoints Response
 
 // Process Get Setpoints Response
-// TODO(TS): this has not been implemented, but has been definded because it is 
+// TODO(TS): this has not been implemented, but has been definded because it is
 // a pure virtual function of IUCM.
 void UniversalControlModule::processGetSetpointsResponse (
 	cea2045::cea2045GetSetpointsResponse2 *message) {
@@ -244,7 +247,7 @@ void UniversalControlModule::processGetSetpointsResponse (
 }  // end Process Get Setpoints Response
 
 // Process Start Cycling Response
-// TODO(TS): this has not been implemented, but has been definded because it is 
+// TODO(TS): this has not been implemented, but has been definded because it is
 // a pure virtual function of IUCM.
 void UniversalControlModule::processStartCyclingResponse (
 	cea2045::cea2045IntermediateResponse *message) {
@@ -252,7 +255,7 @@ void UniversalControlModule::processStartCyclingResponse (
 }  // end Process Start Cycling Response
 
 // Process Terminate Cycling Response
-// TODO(TS): this has not been implemented, but has been definded because it is 
+// TODO(TS): this has not been implemented, but has been definded because it is
 // a pure virtual function of IUCM.
 void UniversalControlModule::processTerminateCyclingResponse (
 	cea2045::cea2045IntermediateResponse *message) {
@@ -260,7 +263,7 @@ void UniversalControlModule::processTerminateCyclingResponse (
 }  // end Process Terminate Cycling Response
 
 // Process Get Present Temperature Response
-// TODO(TS): this has not been implemented, but has been definded because it is 
+// TODO(TS): this has not been implemented, but has been definded because it is
 // a pure virtual function of IUCM.
 void UniversalControlModule::processGetPresentTemperatureResponse (
 	cea2045::cea2045GetPresentTemperatureResponse *message) {
@@ -268,7 +271,7 @@ void UniversalControlModule::processGetPresentTemperatureResponse (
 }  // end Process Get Present Temperature Response
 
 // Process Get UTC Time Response
-// TODO(TS): this has not been implemented, but has been definded because it is 
+// TODO(TS): this has not been implemented, but has been definded because it is
 // a pure virtual function of IUCM.
 void UniversalControlModule::processGetUTCTimeResponse (
 	cea2045::cea2045GetUTCTimeResponse *message) {
@@ -277,7 +280,7 @@ void UniversalControlModule::processGetUTCTimeResponse (
 
 
 // Process Ack Received
-// - 
+// -
 void UniversalControlModule::processAckReceived (
 	cea2045::MessageCode messageCode) {
 	LOG(INFO) << "ack received: " << (int)messageCode;
@@ -296,7 +299,7 @@ void UniversalControlModule::processAckReceived (
 }
 
 // Process Nak Received
-// - 
+// -
 void UniversalControlModule::processNakReceived (
 	cea2045::LinkLayerNakCode nak, cea2045::MessageCode messageCode) {
 	LOG(WARNING) << "nak received";
@@ -332,7 +335,7 @@ void UniversalControlModule::processAppAckReceived (
 }  // end Process App Ack Received
 
 // Process App Nak Received
-// - 
+// -
 void UniversalControlModule::processAppNakReceived (
 	cea2045::cea2045Basic* message) {
 	LOG(INFO) << "app nak received";

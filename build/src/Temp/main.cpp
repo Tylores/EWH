@@ -109,12 +109,8 @@
 #include <string>
 #include <vector>
 
-//#include "../../data/easy_logger.conf"
 #include "include/electric_water_heater.h"
 #include "include/easylogging++.h"
-#include "tsu.h"
-//#include "ts_utility.hpp"
-#include "Operator.h"
 
 using namespace std;
 
@@ -135,7 +131,7 @@ void Help () {
 
 // Command Line Interface
 // - method to allow user controls during program run-time
-static bool CommandLineInterface (const string& input,
+static bool CommandLineInterface (const string& input, 
                                   ElectricWaterHeater *EWH) {
     // check for program argument
     if (input == "") {
