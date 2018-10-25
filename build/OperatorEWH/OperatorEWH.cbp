@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="OperatorEWH" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/OperatorEWH" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add directory="/home/pi/src/CTA-2045-UCM-CPP-Library/cea2045" />
+				</Compiler>
+				<Linker>
+					<Add option="-lcea2045" />
+					<Add option="-lpthread" />
+					<Add directory="/home/pi/src/CTA-2045-UCM-CPP-Library/build/debug" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/OperatorEWH" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../src/electric_water_heater.cpp" />
+		<Unit filename="../src/include/Operator.h" />
+		<Unit filename="../src/include/easylogging++.h" />
+		<Unit filename="../src/include/electric_water_heater.h" />
+		<Unit filename="../src/include/tsu.h" />
+		<Unit filename="../src/include/universal_control_module.h" />
+		<Unit filename="../src/main.cpp" />
+		<Unit filename="../src/universal_control_module.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

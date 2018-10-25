@@ -109,12 +109,11 @@
 #include <string>
 #include <vector>
 
-//#include "../../data/easy_logger.conf"
 #include "include/electric_water_heater.h"
 #include "include/easylogging++.h"
-#include "tsu.h"
-//#include "ts_utility.hpp"
-#include "Operator.h"
+#include "include/Operator.h"
+
+
 
 using namespace std;
 
@@ -208,13 +207,46 @@ void ControlLoop (ElectricWaterHeater *EWH) {
     }
 }  // end Control Loop
 
+void OperLoop (Operator *Oper) {
+	unsigned int time_remaining, time_past;
+    unsigned int time_wait = 1000;
+    auto time_start = chrono::high_resolution_clock::now();
+    auto time_end = chrono::high_resolution_clock::now();
+    chrono::duration<double, milli> time_elapsed;
+
+    while (!done) {
+        time_start = chrono::high_resolution_clock::now();
+            // time since last control call;
+            time_elapsed = time_start - time_end;
+            time_past = time_elapsed.count();
+            Oper->Loop();
+        time_end = chrono::high_resolution_clock::now();
+        time_elapsed = time_end - time_start;
+
+        // determine sleep duration after deducting process time
+        time_remaining = (time_wait - time_elapsed.count());
+        time_remaining = (time_remaining > 0) ? time_remaining : 0;
+        this_thread::sleep_for (chrono::milliseconds (time_remaining));
+    }
+}  // end Control Loop
+
+
 int main() {
-	el::Configurations conf("../data/easy_logger.conf");
+	el::Configurations conf("../../data/easy_logger.conf");
 	// Actually reconfigure all loggers instead
     el::Loggers::reconfigureAllLoggers(conf);
 
 	ElectricWaterHeater *ewh_ptr = new ElectricWaterHeater ();
 	thread EWH (ControlLoop, ewh_ptr);
+
+    //Operator Oper("timeActExt.csv");
+
+// Insert Code Here
+    Operator *opr_ptr = new Operator("timeActExt.csv", ewh_ptr);
+    //Operator *opr_ptr = new Operator("timeActExt.csv");
+
+	thread Oper(OperLoop, opr_ptr); //Same as controll loop, except EWH->Loop(), Oper->Loop()
+
 
     Help ();
     string input;
@@ -223,6 +255,11 @@ int main() {
         done = CommandLineInterface(input, ewh_ptr);
     }
 
+    EWH.join();  //This waits for the loop to close, and closes the thread.
 	delete ewh_ptr;
+
+	Oper.join();  //This waits for the loop to close, and closes the thread.
+	delete opr_ptr;
+
 	return 0;
 }

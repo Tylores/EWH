@@ -1,0 +1,318 @@
+# depslib dependency file v1.0
+1539973233 source:/home/pi/dev2/EWH/build/src/electric_water_heater.cpp
+	<iostream>
+	"include/electric_water_heater.h"
+	"include/easylogging++.h"
+
+1539973233 /home/pi/dev2/EWH/build/src/include/electric_water_heater.h
+	"universal_control_module.h"
+	<string>
+	<cea2045/device/DeviceFactory.h>
+	<cea2045/communicationport/CEA2045SerialPort.h>
+
+1539979334 /home/pi/dev2/EWH/build/src/include/universal_control_module.h
+	<condition_variable>
+	<mutex>
+	<string>
+	<vector>
+	<cea2045/processmessage/IUCM.h>
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/processmessage/IUCM.h
+	"../message/ConvertEnums.h"
+	"../message/CEA2045MessageDeviceInfoResponse.h"
+	"../message/CEA2045MessageCommodityResponse.h"
+	"../message/CEA2045MessageBasic.h"
+	"../message/CEA2045MessageIntermediateResponse.h"
+	"../message/CEA2045MessageGetTemperatureOffsetResponse.h"
+	"../message/CEA2045MessageGetSetpointsResponse.h"
+	"../message/CEA2045MessageGetPresentTemperatureResponse.h"
+	"../message/CEA2045MessageGetUTCTimeResponse.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/ConvertEnums.h
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageDeviceInfoResponse.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageMacros.h
+	<endian.h>
+	"../util/Checksum.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/util/Checksum.h
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageCommodityResponse.h
+	<endian.h>
+	<stdint.h>
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageBasic.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageIntermediateResponse.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageGetTemperatureOffsetResponse.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageGetSetpointsResponse.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageGetPresentTemperatureResponse.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageGetUTCTimeResponse.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/DeviceFactory.h
+	"CEA2045DeviceUCM.h"
+	"../communicationport/ICommunicationPort.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/CEA2045DeviceUCM.h
+	"../processmessage/IUCM.h"
+	"CEA2045Device.h"
+	"ICEA2045DeviceUCM.h"
+	"message/Basic.h"
+	"message/Intermediate.h"
+	"message/SetEnergyPrice.h"
+	"message/SetSetpoints.h"
+	"message/SetTemperatureOffset.h"
+	"message/StartCycling.h"
+	"message/TerminateCycling.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/CEA2045Device.h
+	<memory>
+	<future>
+	<thread>
+	<time.h>
+	"../util/MSTimer.h"
+	"../util/Checksum.h"
+	"../linklayer/ILinkLayerComm.h"
+	"../message/CEA2045Message.h"
+	"../processmessage/IProcessMessage.h"
+	"message/QueryMaxPayload.h"
+	"message/QueryMessageTypeSupported.h"
+	"MessageHandler.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/util/MSTimer.h
+	<sys/time.h>
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/linklayer/ILinkLayerComm.h
+	"ReceiveBuffer.h"
+	"../message/ConvertEnums.h"
+	"ILinkLayerCommRecv.h"
+	"ILinkLayerCommSend.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/linklayer/ReceiveBuffer.h
+	"../communicationport/ICommunicationPort.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/communicationport/ICommunicationPort.h
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/linklayer/ILinkLayerCommRecv.h
+	"ReceiveBuffer.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/linklayer/ILinkLayerCommSend.h
+	"../message/ConvertEnums.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045Message.h
+	<endian.h>
+	<iostream>
+	<string.h>
+	"../message/ConvertEnums.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/processmessage/IProcessMessage.h
+	"../linklayer/ILinkLayerCommSend.h"
+	"../message/CEA2045Message.h"
+	"../message/CEA2045MessageIntermediate.h"
+	"../message/CEA2045MessageIntermediateResponse.h"
+	"../message/CEA2045MessageDataLink.h"
+	"../message/CEA2045MessageBasic.h"
+	"../message/CEA2045MessageSetTemperatureOffsetRequest.h"
+	"../message/CEA2045MessageGetUTCTimeResponse.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageIntermediate.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageDataLink.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageSetTemperatureOffsetRequest.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/QueryMaxPayload.h
+	"../../message/CEA2045MessageDataLink.h"
+	"../message/Message.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/Message.h
+	"../../util/Checksum.h"
+	"../../message/ConvertEnums.h"
+	<future>
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/QueryMessageTypeSupported.h
+	"../../message/CEA2045MessageTypeSupported.h"
+	"../message/Message.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageTypeSupported.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/MessageHandler.h
+	"../linklayer/ILinkLayerCommSend.h"
+	<future>
+	<deque>
+	<memory>
+	<mutex>
+	"message/Message.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/ICEA2045DeviceUCM.h
+	<future>
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/Basic.h
+	"../../message/CEA2045MessageBasic.h"
+	"../message/Message.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/Intermediate.h
+	"../../message/CEA2045MessageIntermediate.h"
+	"../message/Message.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/SetEnergyPrice.h
+	"../../message/CEA2045MessageSetEnergyPriceRequest.h"
+	"../message/Message.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageSetEnergyPriceRequest.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/SetSetpoints.h
+	"../../message/CEA2045MessageSetSetpointsRequest.h"
+	"../message/Message.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageSetSetpointsRequest.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/SetTemperatureOffset.h
+	"../../message/CEA2045MessageSetTemperatureOffsetRequest.h"
+	"../message/Message.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/StartCycling.h
+	"../../message/CEA2045MessageStartCyclingRequest.h"
+	"../message/Message.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageStartCyclingRequest.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/message/TerminateCycling.h
+	"../../message/CEA2045MessageTerminateCyclingRequest.h"
+	"../message/Message.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/message/CEA2045MessageTerminateCyclingRequest.h
+	"CEA2045MessageMacros.h"
+
+1539972895 /home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/communicationport/CEA2045SerialPort.h
+	<iostream>
+	<string>
+	<mutex>
+	<fcntl.h>
+	<termios.h>
+	<unistd.h>
+	<sys/select.h>
+	"../communicationport/ICommunicationPort.h"
+
+1539973233 /home/pi/dev2/EWH/build/src/include/easylogging++.h
+	<syslog.h>
+	<ctime>
+	<cstring>
+	<cstdlib>
+	<cctype>
+	<cwchar>
+	<csignal>
+	<cerrno>
+	<cstdarg>
+	<locale>
+	<codecvt>
+	<cxxabi.h>
+	<execinfo.h>
+	<sys/system_properties.h>
+	<sys/stat.h>
+	<sys/time.h>
+	<direct.h>
+	<windows.h>
+	<winsock2.h>
+	<winsock.h>
+	<string>
+	<vector>
+	<map>
+	<utility>
+	<functional>
+	<algorithm>
+	<fstream>
+	<iostream>
+	<sstream>
+	<memory>
+	<type_traits>
+	<mutex>
+	<thread>
+	<pthread.h>
+	<thread>
+	<queue>
+	<condition_variable>
+	<list>
+	<queue>
+	<deque>
+	<set>
+	<bitset>
+	<stack>
+	<array>
+	<unordered_map>
+	<unordered_set>
+	<QString>
+	<QByteArray>
+	<QVector>
+	<QList>
+	<QPair>
+	<QMap>
+	<QQueue>
+	<QSet>
+	<QLinkedList>
+	<QHash>
+	<QMultiHash>
+	<QStack>
+	<boost/container/vector.hpp>
+	<boost/container/stable_vector.hpp>
+	<boost/container/list.hpp>
+	<boost/container/deque.hpp>
+	<boost/container/map.hpp>
+	<boost/container/flat_map.hpp>
+	<boost/container/set.hpp>
+	<boost/container/flat_set.hpp>
+	<wx/vector.h>
+
+1540236292 source:/home/pi/dev2/EWH/build/src/main.cpp
+	<iostream>
+	<thread>
+	<chrono>
+	<map>
+	<string>
+	<vector>
+	"include/electric_water_heater.h"
+	"include/easylogging++.h"
+	"include/Operator.h"
+
+1539973233 source:/home/pi/dev2/EWH/build/src/universal_control_module.cpp
+	"include/universal_control_module.h"
+	"include/easylogging++.h"
+	<cea2045/util/MSTimer.h>
+	<chrono>
+
+1540436411 /home/pi/dev2/EWH/build/src/include/Operator.h
+	<iostream>
+	<string>
+	<vector>
+	"tsu.h"
+
+1538511984 /home/pi/dev2/EWH/build/src/include/tsu.h
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<regex>
+	<ctime>
+	<map>
+

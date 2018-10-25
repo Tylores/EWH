@@ -111,8 +111,7 @@
 #include <vector>
 
 // CTA2045 Include
-//#include <cea2045/processmessage/IUCM.h>
-#include "/home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/processmessage/IUCM.h"
+#include <cea2045/processmessage/IUCM.h>
 
 using namespace std;
 

@@ -3,12 +3,8 @@
 
 #include "universal_control_module.h"
 #include <string>
-//#include <cea2045/device/DeviceFactory.h>
-#include "/home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/device/DeviceFactory.h"
-
-//#include <cea2045/communicationport/CEA2045SerialPort.h>
-#include "/home/pi/src/CTA-2045-UCM-CPP-Library/cea2045/cea2045/communicationport/CEA2045SerialPort.h"
-
+#include <cea2045/device/DeviceFactory.h>
+#include <cea2045/communicationport/CEA2045SerialPort.h> 
 
 class ElectricWaterHeater {
 public:
@@ -40,8 +36,8 @@ private:
 
 private:
 	// Composition
-	// - These are objects that a smart electric water heater will "have" and
-	// - cannot exist without.
+	// - These are objects that a smart electric water heater will "have" and 
+	// - cannot exist without. 
 	UniversalControlModule ucm_;
 	cea2045::ResponseCodes response_codes_;
 	cea2045::CEA2045SerialPort sp_;
