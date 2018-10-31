@@ -111,12 +111,14 @@
 
 #include "include/electric_water_heater.h"
 #include "include/easylogging++.h"
+#include "include/schedule_operator.h"
 
 using namespace std;
 
 INITIALIZE_EASYLOGGINGPP
 
 bool done = false;  //signals program to stop
+bool operator_enabled = true;
 
 // Help
 // - CLI interface description
@@ -130,6 +132,8 @@ void Help () {
     cout << "> l 		load up\n";
     cout << "> e 		grid emergency\n";
     cout << "> r 		stop reheat\n";
+    cout << "> o 		enable schedule operator\n";
+    cout << "> d 		disable schedule operator\n";
     cout << "> p        	print properties\n" << endl;
 } // end Help
 
@@ -141,6 +145,7 @@ static bool CommandLineInterface (const string& input,
     if (input == "") {
         return false;
     }
+
     char cmd = input[0];
 
     // deliminate input string to argument parameters
@@ -214,6 +219,16 @@ static bool CommandLineInterface (const string& input,
             return false;
         }
 
+	case 'o': {
+            operator_enabled = true;
+            return false;
+        }
+
+	case 'd': {
+            operator_enabled = false;
+            return false;
+        }
+
         default: {
             Help();
             return false;
@@ -244,6 +259,36 @@ void ControlLoop (ElectricWaterHeater *EWH) {
     }
 }  // end Control Loop
 
+void OperLoop (ScheduleOperator *Oper) {
+	unsigned int time_remaining, time_past;
+    unsigned int time_wait = 1000;
+    auto time_start = chrono::high_resolution_clock::now();
+    auto time_end = chrono::high_resolution_clock::now();
+    chrono::duration<double, milli> time_elapsed;
+
+    while (!done) {
+
+    	time_start = chrono::high_resolution_clock::now();
+        // time since last control call;
+        time_elapsed = time_start - time_end;
+        time_past = time_elapsed.count();
+
+	if (operator_enabled == true) {
+            Oper->Loop();
+	}
+
+        time_end = chrono::high_resolution_clock::now();
+        time_elapsed = time_end - time_start;
+
+        // determine sleep duration after deducting process time
+        time_remaining = (time_wait - time_elapsed.count());
+        time_remaining = (time_remaining > 0) ? time_remaining : 0;
+        this_thread::sleep_for (chrono::milliseconds (time_remaining));
+    }
+}  // end Operator Loop
+
+
+
 int main() {
 	el::Configurations conf("../data/easy_logger.conf");
 	// Actually reconfigure all loggers instead
@@ -251,6 +296,10 @@ int main() {
 
 	ElectricWaterHeater *ewh_ptr = new ElectricWaterHeater ();
 	thread EWH (ControlLoop, ewh_ptr);
+	
+	ScheduleOperator *opr_ptr = new ScheduleOperator("../data/timeActExt.csv", ewh_ptr);
+	thread Oper(OperLoop, opr_ptr); //Same as control loop, except EWH->Loop(), Oper->Loop()
+
 
     Help ();
     string input;
@@ -259,6 +308,11 @@ int main() {
         done = CommandLineInterface(input, ewh_ptr);
     }
 
+	EWH.join();
 	delete ewh_ptr;
+
+	Oper.join();
+	delete opr_ptr;
+
 	return 0;
 }
