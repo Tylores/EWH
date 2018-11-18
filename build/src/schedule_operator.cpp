@@ -6,8 +6,6 @@
 
 ScheduleOperator::ScheduleOperator (std::string input, ElectricWaterHeater *ewh) : file_name_(input), ptr_(ewh), index_(0){
 	schedule_ = tsu::FileToMatrix(file_name_, ',', 4);
-	//tsu::string_matrix data = tsu::FileToMatrix(file_name_, ',' , 4);
-	//schedule_ = data;
 }
 
 ScheduleOperator::~ScheduleOperator () {};
@@ -30,17 +28,20 @@ void ScheduleOperator::Loop () {
 	std::string Op_amount;
 
 	time_t now = time(0);
-	char time_formatted[100];
-	tm now_local = *localtime(&now);
-	strftime(time_formatted, sizeof(time_formatted), "%T", &now_local);
+	now = now % 86400;
+	if (now == 0) {
+		index_ = 0;
+	}
 
-	for (int i = 0; i < schedule_.size(); i++) {
-		if (schedule_[i][3] == time_formatted) {
+	for (int i = index_; i < schedule_.size(); i++) {
+		if (std::stoi(schedule_[i][0]) % 86400 == now) {
 			Op_command = schedule_[i][1];
 			Op_amount = schedule_[i][2];
+			index_ = i;
 			break;
 		}
 	}
+
 	
 	if(Op_command == "idle") {
 		ScheduleOperator::Idle ();

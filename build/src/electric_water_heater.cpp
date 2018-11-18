@@ -88,7 +88,7 @@ void ElectricWaterHeater::StopReheat () {
 }  ///
 
 float ElectricWaterHeater::CalculatePower(){
-	return current_transducer_1_.GetCurrent() * 208; // assuming Vrms = 208
+	return current_transducer_1_.GetCurrent() * 240; // assuming Vrms = 240
 }
 
 // Update Commodity Data
