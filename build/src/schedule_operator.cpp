@@ -27,20 +27,43 @@ void ScheduleOperator::Loop () {
 	std::string Op_command;
 	std::string Op_amount;
 
+// USE THIS SECTION IF DATA IS PARSED USING INTEGER UTC
 	time_t now = time(0);
 	now = now % 86400;
-	if (now == 0) {
-		index_ = 0;
-	}
 
 	for (int i = index_; i < schedule_.size(); i++) {
 		if (std::stoi(schedule_[i][0]) % 86400 == now) {
 			Op_command = schedule_[i][1];
 			Op_amount = schedule_[i][2];
-			index_ = i;
+			if (i == (schedule_.size()-1)) {
+				index_ = 0;
+			} else {
+				index_ = i;
+			}
 			break;
 		}
 	}
+
+/* USE THIS SECTION IF DATA IS PARSED USING FORMATTED STRING LOCAL TIME
+
+	time_t now = time(0);
+	char time_formatted[100];
+	tm now_local = *localtime(&now);
+	strftime(time_formatted, sizeof(time_formatted), "%T", &now_local);
+
+ 	for (int i = 0; i < schedule_.size(); i++) {
+		if (schedule_[i][3] == time_formatted) {
+			Op_command = schedule_[i][1];
+			Op_amount = schedule_[i][2];
+			if (i == (schedule_.size()-1)) {
+				index_ = 0;
+			} else {
+				index_ = i;
+			}
+			break;
+		}
+	}
+*/
 
 	
 	if(Op_command == "idle") {
